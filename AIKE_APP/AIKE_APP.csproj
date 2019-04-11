@@ -401,6 +401,8 @@
     <Content Include="Views\Test\tttttttt.cshtml" />
     <Content Include="Views\Test\aaaaaaa.cshtml" />
     <Content Include="Views\Test\xxxxxx.cshtml" />
+    <Content Include="Views\Test\kkk.cshtml" />
+    <Content Include="Views\Test\_PartialPage1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AIKE_BLL\AIKE_BLL.csproj">
