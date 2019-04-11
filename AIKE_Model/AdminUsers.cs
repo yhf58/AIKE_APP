@@ -14,6 +14,7 @@ namespace AIKE_Model
         public string AccountNumber { get; set; }
         public string  RealName { get; set; }
         public decimal AccountBalance{ get; set; }
+
         public string Phone { get; set; }
     }
 }
