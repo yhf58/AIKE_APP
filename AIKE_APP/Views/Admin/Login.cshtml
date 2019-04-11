@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>艾客众筹后台登录</title>
+    <link href="~/Lib/Admin/css/login.css" rel="stylesheet" />
+    <link href="~/Common/layUI/theme/layui.css" rel="stylesheet" />
+    <script src="~/Common/jquery-3.1.1.js"></script>
+    <script src="~/Common/layUI/layer.js"></script>
+</head>
+<body>
+    <main>
+        <form class="form">
+            <div class="form__cover"></div>
+            <div class="form__loader">
+                <div class="spinner active">
+                    <svg class="spinner__circular" viewBox="25 25 50 50">
+                        <circle class="spinner__path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="form__content">
+                <h1>艾客后台管理系统</h1>
+                <div class="styled-input">
+                    <input type="text" id="name" class="styled-input__input" name="nickname">
+                    <div class="styled-input__placeholder"> <span class="styled-input__placeholder-text">账号</span> </div>
+                    <div class="styled-input__circle"></div>
+                </div>
+                <div class="styled-input">
+                    <input type="text" id="pwd" class="styled-input__input">
+                    <div class="styled-input__placeholder"> <span class="styled-input__placeholder-text">密码</span> </div>
+                    <div class="styled-input__circle"></div>
+                </div>
+                <button type="button" id="logon_admin" class="styled-button"> <span class="styled-button__real-text-holder"> <span class="styled-button__real-text">登录</span> <span class="styled-button__moving-block face"> <span class="styled-button__text-holder"> <span class="styled-button__text">登录</span> </span> </span><span class="styled-button__moving-block back"> <span class="styled-button__text-holder"> <span class="styled-button__text">登录</span> </span> </span> </span> </button>
+            </div>
+        </form>
+    </main>
+    <script src="~/Lib/Admin/js/login.js"></script>
+   <script>
+       $(function () {
+
+           $("#logon_admin").click(function () {
+
+               $.ajax({
+                   url: "../Admin/Logins",
+                   data: { "name": $("#name").val(), "pwd": $("#pwd").val() },
+                   success: function (data) {
+                       if (parseInt(data) == 1) {
+                           layer.msg("登录成功。", { icon: 1 });
+                           setTimeout(" location.href='../Admin/Index'",2000);
+                       }
+                       if (parseInt(data) == 2) {
+                           layer.msg("账号或密码错误。", { icon: 2 });
+                       }
+                       if (parseInt(data) ==0) {
+                           layer.msg("账号或密码不能为空！", { icon: 2 });
+                       }
+                   },
+                   error: function () {
+                       layer.msg("登录失败！", { icon: 2});
+                   }
+               });
+
+           });
+
+       });
+   </script>
+</body>
+</html>

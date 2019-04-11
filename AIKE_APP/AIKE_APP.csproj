@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DB6F728-6C96-4204-A8B5-77C8F551060F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIKE_APP</RootNamespace>
+    <AssemblyName>AIKE_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Filter\MyCheckFilterAttribute.cs" />
+    <Compile Include="Filter\PersonCheckFilterAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Logins.cs" />
+    <Compile Include="Models\Msg.cs" />
+    <Compile Include="Models\Paypayzhu.cs" />
+    <Compile Include="Models\PayUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\ajaxfileupload.js" />
+    <Content Include="Common\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Common\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Common\bootstrap\css\bootstrap.css" />
+    <Content Include="Common\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Common\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Common\bootstrap\js\bootstrap.js" />
+    <Content Include="Common\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Common\bootstrap\js\npm.js" />
+    <Content Include="Common\Index\digitalScroll.js" />
+    <Content Include="Common\Index\Index.js" />
+    <Content Include="Common\Index\JavaScript.js" />
+    <Content Include="Common\Index\jquery.min.js" />
+    <Content Include="Common\Index\style.css" />
+    <Content Include="Common\Index\YuxiSlider.jQuery.min.js" />
+    <Content Include="Common\jquery-3.1.1.js" />
+    <Content Include="Common\jquery-1.6.4.js" />
+    <Content Include="Common\jquery-2.1.1.js" />
+    <Content Include="Common\layUI\jquery-3.1.1.js" />
+    <Content Include="Common\layUI\layer.js" />
+    <Content Include="Common\layUI\theme\code.css" />
+    <Content Include="Common\layUI\theme\default\icon-ext.png" />
+    <Content Include="Common\layUI\theme\default\icon.png" />
+    <Content Include="Common\layUI\theme\default\layer.css" />
+    <Content Include="Common\layUI\theme\default\loading-0.gif" />
+    <Content Include="Common\layUI\theme\default\loading-1.gif" />
+    <Content Include="Common\layUI\theme\default\loading-2.gif" />
+    <Content Include="Common\layUI\theme\layui.css" />
+    <Content Include="Common\layUI\theme\layui.mobile.css" />
+    <Content Include="Common\News\news.css" />
+    <Content Include="Common\Project\bootstrap-switch.css" />
+    <Content Include="Common\Project\bootstrap-switch.min.js" />
+    <Content Include="Common\Project\bootstrap.css" />
+    <Content Include="Common\Project\jquery-3.1.1.js" />
+    <Content Include="Common\Project\Project.css" />
+    <Content Include="Common\Project\Project.js" />
+    <Content Include="Common\Project\ProjectRetun.js" />
+    <Content Include="Common\Project\ProjectReturn.css" />
+    <Content Include="Common\Project\wangEditor.css" />
+    <Content Include="Common\Project\wangEditor.js" />
+    <Content Include="Common\Project\wangEditor.min.css" />
+    <Content Include="Common\Project\wangEditor.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\fancy_deboss.png" />
+    <Content Include="Images\mooning.png" />
+    <Content Include="Images\number1.png" />
+    <Content Include="Images\tweed.png" />
+    <Content Include="Images\儿童自行车.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\智能洗碗机.jpg" />
+    <Content Include="Images\智能肩颈按摩仪.jpg" />
+    <Content Include="Images\花洒.jpg" />
+    <Content Include="Lib\Admin\css\admin_index.css" />
+    <Content Include="Lib\Admin\css\bootstrap-switch.css" />
+    <Content Include="Lib\Admin\css\EditNews.css" />
+    <Content Include="Lib\Admin\css\edit\bootstrap-markdown.min.css" />
+    <Content Include="Lib\Admin\css\edit\demo.css" />
+    <Content Include="Lib\Admin\css\edit\normalize.css" />
+    <Content Include="Lib\Admin\css\login.css" />
+    <Content Include="Lib\Admin\css\style.css" />
+    <Content Include="Lib\Admin\img\admin_bg.jpg" />
+    <Content Include="Lib\Admin\img\a_bg.png" />
+    <Content Include="Lib\Admin\img\logo.jpg" />
+    <Content Include="Lib\Admin\img\l_bg.png" />
+    <Content Include="Lib\Admin\js\apend.js" />
+    <Content Include="Lib\Admin\js\bootstrap-switch.min.js" />
+    <Content Include="Lib\Admin\js\circle.js" />
+    <Content Include="Lib\Admin\js\Comment.js" />
+    <Content Include="Lib\Admin\js\edit\bootstrap-markdown.js" />
+    <Content Include="Lib\Admin\js\edit\bootstrap-markdown.zh.js" />
+    <Content Include="Lib\Admin\js\edit\bootstrap.min.js" />
+    <Content Include="Lib\Admin\js\edit\jquery-1.11.0.min.js" />
+    <Content Include="Lib\Admin\js\login.js" />
+    <Content Include="Lib\Error\FOF\css\style.css" />
+    <Content Include="Lib\Home\Details\css\Details.css" />
+    <Content Include="Lib\Home\Details\css\emoji.css" />
+    <Content Include="Lib\Home\Details\css\nanoscroller.css" />
+    <Content Include="Lib\Home\Details\img\1.jpg" />
+    <Content Include="Lib\Home\Details\img\2.jpg" />
+    <Content Include="Lib\Home\Details\img\3.jpg" />
+    <Content Include="Lib\Home\Details\img\4.jpg" />
+    <Content Include="Lib\Home\Details\img\5.jpg" />
+    <Content Include="Lib\Home\Details\img\6.jpg" />
+    <Content Include="Lib\Home\Details\img\7.jpg" />
+    <Content Include="Lib\Home\Details\img\blank.gif" />
+    <Content Include="Lib\Home\Details\img\emoji_spritesheet_0.png" />
+    <Content Include="Lib\Home\Details\img\emoji_spritesheet_1.png" />
+    <Content Include="Lib\Home\Details\img\emoji_spritesheet_2.png" />
+    <Content Include="Lib\Home\Details\img\emoji_spritesheet_3.png" />
+    <Content Include="Lib\Home\Details\img\emoji_spritesheet_4.png" />
+    <Content Include="Lib\Home\Details\img\IconsetSmiles.png" />
+    <Content Include="Lib\Home\Details\img\IconsetSmiles_1x.png" />
+    <Content Include="Lib\Home\Details\img\IconsetW.png" />
+    <Content Include="Lib\Home\Details\img\IconsetW_1x.png" />
+    <Content Include="Lib\Home\Details\img\ID1.jpg" />
+    <Content Include="Lib\Home\Details\img\xq1.jpg" />
+    <Content Include="Lib\Home\Details\img\xq2.jpg" />
+    <Content Include="Lib\Home\Details\img\和田玉.jpg" />
+    <Content Include="Lib\Home\Details\js\config.js" />
+    <Content Include="Lib\Home\Details\js\Details.js" />
+    <Content Include="Lib\Home\Details\js\emoji-picker.js" />
+    <Content Include="Lib\Home\Details\js\jquery.emojiarea.js" />
+    <Content Include="Lib\Home\Details\js\nanoscroller.min.js" />
+    <Content Include="Lib\Home\Details\js\tether.min.js" />
+    <Content Include="Lib\Home\Details\js\util.js" />
+    <Content Include="Lib\Home\Index\assets\css\animate.css" />
+    <Content Include="Lib\Home\Index\assets\css\bootstrap.min.css" />
+    <Content Include="Lib\Home\Index\assets\css\font-awesome.min.css" />
+    <Content Include="Lib\Home\Index\assets\css\lightcase.css" />
+    <Content Include="Lib\Home\Index\assets\css\Project.css" />
+    <Content Include="Lib\Home\Index\assets\css\responsive.css" />
+    <Content Include="Lib\Home\Index\assets\css\style.css" />
+    <Content Include="Lib\Home\Index\assets\css\swiper.min.css" />
+    <Content Include="Lib\Home\Index\assets\js\bootstrap.min.js" />
+    <Content Include="Lib\Home\Index\assets\js\custom.js" />
+    <Content Include="Lib\Home\Index\assets\js\isotope.pkgd.min.js" />
+    <Content Include="Lib\Home\Index\assets\js\jquery.easing.min.js" />
+    <Content Include="Lib\Home\Index\assets\js\jquery.min.js" />
+    <Content Include="Lib\Home\Index\assets\js\lightcase.js" />
+    <Content Include="Lib\Home\Index\assets\js\map-function.js" />
+    <Content Include="Lib\Home\Index\assets\js\swiper.jquery.min.js" />
+    <Content Include="Lib\Home\Index\assets\js\wow.min.js" />
+    <Content Include="Lib\Home\Index\images\about.jpg" />
+    <Content Include="Lib\Home\Index\images\banner.jpg" />
+    <Content Include="Lib\Home\Index\images\blog\blog_01.jpg" />
+    <Content Include="Lib\Home\Index\images\blog\blog_02.jpg" />
+    <Content Include="Lib\Home\Index\images\blog\blog_03.jpg" />
+    <Content Include="Lib\Home\Index\images\clients\client_01.jpg" />
+    <Content Include="Lib\Home\Index\images\clients\client_02.jpg" />
+    <Content Include="Lib\Home\Index\images\clients\client_03.jpg" />
+    <Content Include="Lib\Home\Index\images\clients\client_04.jpg" />
+    <Content Include="Lib\Home\Index\images\clients\client_05.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_01.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_02.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_03.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_04.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_05.jpg" />
+    <Content Include="Lib\Home\Index\images\gallery\gallery_06.jpg" />
+    <Content Include="Lib\Home\Index\images\logo.png" />
+    <Content Include="Lib\Home\Index\images\team\1.jpg" />
+    <Content Include="Lib\Home\Index\images\team\11.jpg" />
+    <Content Include="Lib\Home\Index\images\team\2.jpg" />
+    <Content Include="Lib\Home\Index\images\team\3.jpg" />
+    <Content Include="Lib\Home\Index\images\team\4.jpg" />
+    <Content Include="Lib\Home\Index\images\team\team_01.jpg" />
+    <Content Include="Lib\Home\Index\images\team\team_02.jpg" />
+    <Content Include="Lib\Home\Index\images\team\team_03.jpg" />
+    <Content Include="Lib\Home\Index\images\team\team_04.jpg" />
+    <Content Include="Lib\Home\Index\images\testimonial\testimonial_01.jpg" />
+    <Content Include="Lib\Home\Index\images\testimonial\testimonial_02.jpg" />
+    <Content Include="Lib\Home\Index\images\testimonial\testimonial_03.jpg" />
+    <Content Include="Lib\Home\Index\images\testimonial\testimonial_bg.jpg" />
+    <Content Include="Lib\Home\Login\css\reset.css" />
+    <Content Include="Lib\Home\Login\css\style.css" />
+    <Content Include="Lib\Home\Login\img\bg.jpg" />
+    <Content Include="Lib\Home\Login\img\gengduo.png" />
+    <Content Include="Lib\Home\Login\img\name.png" />
+    <Content Include="Lib\Home\Login\img\password.png" />
+    <Content Include="Lib\Home\Login\img\qq.png" />
+    <Content Include="Lib\Home\Login\img\weixin.png" />
+    <Content Include="Lib\Home\Login\img\头像.png" />
+    <Content Include="Lib\Home\Login\js\app.js" />
+    <Content Include="Lib\Home\Login\js\particles2.min.js" />
+    <Content Include="Lib\Home\Person\Person.css" />
+    <Content Include="Lib\Home\register\css\bootstrap.min.css" />
+    <Content Include="Lib\Home\register\css\iconfont.css" />
+    <Content Include="Lib\Home\register\css\prettify.css" />
+    <Content Include="Lib\Home\register\img\成功.png" />
+    <Content Include="Lib\Home\register\js\jquery.bootstrap.wizard.js" />
+    <Content Include="Lib\Home\register\js\prettify.js" />
+    <Content Include="Lib\News\css\chinaz.css" />
+    <Content Include="Lib\News\js\jquery-1.8.3.min.js" />
+    <Content Include="Lib\News\js\js.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\MsgImg\" />
+    <Folder Include="Lib\Error\FOF\images\" />
+    <Folder Include="Lib\Error\FOF\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Common\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Common\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Common\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Common\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Common\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Common\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Common\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Lib\Home\Index\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Lib\Home\Index\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Lib\Home\Index\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Lib\Home\Index\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Lib\Home\Index\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Lib\Home\Index\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Lib\Home\Index\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Lib\Home\Index\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Common\Project\wangEditor.min.js.map" />
+    <Content Include="Lib\Home\Details\css\cover.scss" />
+    <Content Include="libman.json" />
+    <None Include="packages.config" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\Admin\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\User.cshtml" />
+    <Content Include="Views\Admin\Comment.cshtml" />
+    <Content Include="Views\Admin\Project.cshtml" />
+    <Content Include="Views\Admin\NewsList.cshtml" />
+    <Content Include="Views\Admin\EditNews.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\Forget.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Test\tt.cshtml" />
+    <Content Include="Views\File\Index.cshtml" />
+    <Content Include="Views\Pay\Index.cshtml" />
+    <Content Include="Views\Shared\Person\_LayoutPerson.cshtml" />
+    <Content Include="Views\Home\Collect.cshtml" />
+    <Content Include="Views\Home\Identification.cshtml" />
+    <Content Include="Views\Home\Message.cshtml" />
+    <Content Include="Views\Home\Person.cshtml" />
+    <Content Include="Views\Home\ProjectManagement.cshtml" />
+    <Content Include="Views\Home\Subsidize.cshtml" />
+    <Content Include="Views\Home\Updata.cshtml" />
+    <Content Include="Views\Shared\Project\Project.cshtml" />
+    <Content Include="Views\Project\ProjectDetails.cshtml" />
+    <Content Include="Views\Project\Returns.cshtml" />
+    <Content Include="Views\Project\ProjectReturn.cshtml" />
+    <Content Include="Views\Shared\Home\_LayoutHead.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Project\File.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutNews.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIKE_BLL\AIKE_BLL.csproj">
+      <Project>{1791a668-7b4f-4056-b918-fdfde58d0155}</Project>
+      <Name>AIKE_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AIKE_Model\AIKE_Model.csproj">
+      <Project>{86ebef90-184a-4d85-b351-0f8e5efeb930}</Project>
+      <Name>AIKE_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64354</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64354/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

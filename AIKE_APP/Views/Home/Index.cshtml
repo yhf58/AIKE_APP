@@ -1,0 +1,672 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using AIKE_Model;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+    <!-- Bootstrap -->
+    <link href="../Lib/Home/Index/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font-Awesome -->
+    <link href="../Lib/Home/Index/assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Lightcase -->
+    <link href="../Lib/Home/Index/assets/css/lightcase.css" rel="stylesheet" />
+
+    <!-- Swiper -->
+    <link href="../Lib/Home/Index/assets/css/swiper.min.css" rel="stylesheet" />
+
+    <!-- Animate -->
+    <link href="../Lib/Home/Index/assets/css/animate.css" rel="stylesheet" />
+
+    <!-- Style -->
+    <link href="../Lib/Home/Index/assets/css/style.css" rel="stylesheet" />
+
+    <!-- Responsive -->
+    <link href="../Lib/Home/Index/assets/css/responsive.css" rel="stylesheet" />
+
+
+
+    <link href="~/Common/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" />
+
+    <link href="~/Common/Index/style.css" rel="stylesheet" />
+
+    <style>
+        .t_num i {
+            width: 33px;
+            height: 47px;
+            display: inline-block;
+            background: url('../../Images/number1.png')no-repeat;
+            background-position: 0 0;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll">
+    <!-- Preloader start here -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ld-child"></div>
+            <div class="ld-child ld-child2"></div>
+        </div>
+    </div>
+    @* 导航栏 *@
+    <header>
+        <nav class="main-menu menu-fixed">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" style="font-size:30px;color:#ffffff;text-decoration:content;line-height: 90px;">艾客众筹</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#banner">艾客</a></li>
+                        <li><a class="page-scroll" href="#portfolio">项目</a></li>
+                        <li><a class="page-scroll" href="#skills">合作</a></li>
+                        <li><a class="page-scroll" href="#blog">新闻</a></li>
+                        <li><a class="page-scroll" href="#contact">关于</a></li>
+                        @if (Session["person"] == null)
+                        {<li style="width:180px;height:90px;border:0px solid red;position:absolute;right:20px;top:0px;"><a class="page-scroll" href="../Home/Login" style="color:red;">亲，请登录...</a></li>}
+                        @if (Session["person"] != null) {
+                         Userinfo u = (Userinfo)Session["person"];
+                        <li style="width:180px;height:90px;border:0px solid red;position:absolute;right:20px;top:0px;">
+                            <a class="page-scroll" href="../Home/Person?user=@u.AccountNumber">
+                                <img src="~/Lib/Home/Login/img/头像.png" style="width:30px;height:30px;" />@u.AccountNumber,你好！
+                            </a></li> }
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+
+            </div><!-- /.container -->
+        </nav>
+    </header>
+
+    @* 头部 *@
+    <section id="banner" class="banner">
+        <div class="overlay">
+            <div class="banner-content">
+                <h3>全球专业实体空间投资平台</h3>
+                <p>认真对待每一个梦想</p>
+                <a href="#about" class="default-button page-scroll">成为投资者</a>
+                <!--项目筹集进度-->
+                <div class="container">
+
+                    <div class="row" style="padding-top:50px;">
+                        <div class="col-xs-6 col-sm-3"
+                             style="background-color: #000000;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;background:rgba(255,255,255,0.3);">
+                            <p>
+                                <span class="t_num t_num1"></span>
+                            <p>
+                                参与人<br>
+                                用户的信任是我们最大的财富
+                            </p>
+                            </p>
+                        </div>
+                        <div class="col-xs-6 col-sm-3"
+                             style="background-color: #000000;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;background:rgba(255,255,255,0.3);">
+                            <p>
+                                <span class="t_num" id="t_num2"></span>
+                            <p>
+                                投资项目<br>
+                                遍布全球1488个目的地资源海量
+                            </p>
+                            </p>
+                        </div>
+
+                        <div class="clearfix visible-xs"></div>
+
+                        <div class="col-xs-6 col-sm-3"
+                             style="background-color: #000000;
+         box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;background:rgba(255,255,255,0.3);">
+                            <p>
+                                <span class="t_num" id="t_num3"></span>
+                            <p>
+                                成交金额<br>
+                                总投资金额达163.84亿
+                            </p>
+                            </p>
+                        </div>
+                        <div class="col-xs-6 col-sm-3"
+                             style="background-color: #000000;box-shadow:
+         inset 1px -1px 1px #444, inset -1px 1px 1px #444;background:rgba(255,255,255,0.3);">
+                            <p>
+                                <span class="t_num" id="t_num4"></span>
+                            <p>
+                                成立至今<br>
+                                不忘初心，方得始终
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- banner content -->
+        </div><!-- overlay -->
+    </section>
+
+    @*众筹项目*@
+    <!-- Portfolio section start -->
+    <section id="portfolio" class="portfolio bg-color">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 style="font-weight:900">众筹项目</h1>
+                <p><i></i></p>
+            </div>
+            @* 项目类型 *@
+            <ul class="portfolio-menu">
+                <li class="active" data-filter="*">所有类型</li>
+                <li data-filter=".design"><a href="../Home/Index?typename=1"> 科技</a></li>
+                <li data-filter=".photography"><a href="../Home/Index?typename=2">食品</a></li>
+                <li data-filter=".illustration"><a href="../Home/Index?typename=3">设计</a></li>
+                <li data-filter=".vector"><a href="../Home/Index?typename=4">文学</a></li>
+                <li data-filter=".vector"><a href="../Home/Index?typename=5">娱乐</a></li>
+                <li data-filter=".vector"><a href="../Home/Index?typename=6">公益</a></li>
+            </ul>
+            @* 项目列表 *@
+            <div class="portfolio_items">
+                @foreach (Project itme in (List<Project>)ViewData["Read"])
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="box">
+                            <div class="box-img">
+                                <img style="width:250px;height:300px;" src="~/Images/@itme.ProjectCover" />
+                            </div>
+                            <div class="box-content">
+                                <h4 class="title">@itme.ProjectName</h4>
+                                <p class="description">@itme.ProjectIntroduction</p>
+                                <a href="../Home/Details?ProjectID=@itme.ProjectID" class="btn btn-success">详 情</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div><!-- portfolio items -->
+            @* 分页 *@
+            <div style="width:30%;height:5%; margin:0px auto;line-height:300%;">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pagination-lg" style="margin-top:20%;">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div><!-- container -->
+    </section>
+
+    <!-- Portfolio section end -->
+    <!-- Client section start -->
+    @* 项目分类 *@
+    <!-- Client section end -->
+    <!-- services section start -->
+    <section id="services" class="services padding-120 bg-color">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 style="font-weight:900">项目分类</h1>
+                <p><i></i></p>
+            </div>
+            <div class="service-items">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+                            <h4>新奇酷玩</h4>
+                            <p>“最新最潮的科技玩品，体验最新科技等你来挖掘这份惊喜的宝藏”</p>
+                        </div><!-- service-item -->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-code" aria-hidden="true"></i></span>
+                            <h4>健康出行</h4>
+                            <p>健康最高的美赞就是对品质的最求，健康生活从此刻开始</p>
+                        </div><!-- service-item -->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-camera-retro" aria-hidden="true"></i></span>
+                            <h4>生活美学</h4>
+                            <p>定格每一个美好时光，生活处处是美学，只等你来发现</p>
+                        </div><!-- service-item -->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+                            <h4>美食市集</h4>
+                            <p>汇聚美食文化，让美食占领您的味蕾，让感官前所未有的体验</p>
+                        </div><!-- service-item -->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
+                            <h4>文化艺术</h4>
+                            <p>最古朴的艺术就是文化，体会全世界不同的文化艺术，行走在海洋的书中</p>
+                        </div><!-- service-item -->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <span><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                            <h4>惠民扶贫</h4>
+                            <p>盖茨说：“2035年世界将没有贫穷，我们也在为这个梦想而奉献一份力量”</p>
+                        </div><!-- service-item -->
+                    </div>
+                </div><!-- row -->
+            </div><!-- service-items -->
+        </div><!-- container -->
+    </section>
+    <!-- services section end -->
+    @* 热门进度 *@
+    <!-- skills section start -->
+    <section id="skills" class="skills padding-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="section-header">
+                        <h1 style="font-weight:900">热门项目筹集进度</h1>
+                        <p><i></i></p>
+                        <p><i></i></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="skill-bars">
+                        <div class="bar-item">
+                            <h5>舒小小</h5>
+                            <div class="progress">
+                                <div class="progress-bar  wow slideInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"><span>90%</span></div>
+                            </div>
+                        </div><!-- bar-item -->
+                        <div class="bar-item">
+                            <h5>上林山楂</h5>
+                            <div class="progress">
+                                <div class="progress-bar  wow slideInLeft" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"><span>85%</span></div>
+                            </div>
+                        </div><!-- bar-item -->
+                        <div class="bar-item">
+                            <h5>智能电饭锅</h5>
+                            <div class="progress">
+                                <div class="progress-bar  wow slideInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"><span>90%</span></div>
+                            </div>
+                        </div><!-- bar-item -->
+                        <div class="bar-item">
+                            <h5>小鹏汽车</h5>
+                            <div class="progress">
+                                <div class="progress-bar  wow slideInLeft" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span>80%</span></div>
+                            </div>
+                        </div><!-- bar-item -->
+                    </div><!-- skill-bars -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </section>
+    <!-- skills section end -->
+    @* 团队介绍 *@
+    <!-- Team section end -->
+    <section id="team" class="team padding-120">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 style="font-weight:900">合作伙伴</h1>
+                <p><i>一堆沙子是松散的，可是它和水泥、石子、水混合后，比花岗岩还坚韧。</i></p>
+            </div>
+
+            <div class="team-items">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-item">
+                            <div class="image">
+                                <img src="~/Lib/Home/Index/images/team/1.jpg" alt="team image" class="img-responsive" style="width:700px;height:350px">
+                            </div>
+                            <div class="details">
+                                <h4>Pony</h4>
+                                <p>腾讯公司控股董事会主席</p>
+                            </div>
+                            <div class="overlay">
+                                <h4>Pony</h4>
+                                <span>腾讯公司董事会主席</span>
+                                <p>艾客众筹，一个用心对待每一个梦想的平台。</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- team item -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-item">
+                            <div class="image">
+                                <img src="/Lib/Home/Index/images/team/2.jpg" alt="team image" class="img-responsive" style="width:700px;height:350px">
+                            </div>
+                            <div class="details">
+                                <h4>Jack Ma</h4>
+                                <p>阿里巴巴集团董事局主席</p>
+                            </div>
+                            <div class="overlay">
+                                <h4>Jack Ma</h4>
+                                <span>阿里巴巴集团董事局主席</span>
+                                <p>在一个聪明人满街乱窜年代，稀缺的恰恰不是聪明，而是一心一意，孤注一掷，一条心，一根筋。加油，艾客众筹</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- team item -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-item">
+                            <div class="image">
+                                <img src="~/Lib/Home/Index/images/team/3.jpg" alt="team image" class="img-responsive" style="width:700px;height:350px">
+                            </div>
+                            <div class="details">
+                                <h4>Robin</h4>
+                                <p>百度公司董事长</p>
+                            </div>
+                            <div class="overlay">
+                                <h4>Robin</h4>
+                                <span>百度公司董事长</span>
+                                <p>做自己喜欢做的事情，做自己擅长做的事情。</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- team item -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-item">
+                            <div class="image">
+                                <img src="~/Lib/Home/Index/images/team/4.jpg" alt="team image" class="img-responsive" style="width:700px;height:350px">
+                            </div>
+                            <div class="details">
+                                <h4>WangJianlin</h4>
+                                <p>万达集团股份有限公司董事长</p>
+                            </div>
+                            <div class="overlay">
+                                <h4>WangJianlin</h4>
+                                <span>万达集团股份有限公司董事长</span>
+                                <p>心有多大舞台就有多大，志向大小决定成功的概率。</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- team item -->
+                    </div>
+                </div><!-- row -->
+            </div><!-- team items -->
+
+
+        </div><!-- container -->
+    </section><!-- team -->
+    @* 客户证言 *@
+    <!-- Testimonial section start -->
+    <section id="testimonial" class="testimonial">
+        <div class="overlay padding-120">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h1 style="font-weight:900">客户证言</h1>
+                    <p><i>展示最真实的我们，做最安全、可靠的众筹平台</i></p>
+                </div><!-- section header -->
+
+                <div class="testimonial-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="image">
+                                    <img src="/Lib/Home/Index/images/testimonial/testimonial_01.jpg" alt="client image" class="img-responsive">
+                                </div>
+                                <div class="content">
+                                    <h4>古剑奇谭</h4>
+                                    <span>众筹用户</span>
+                                    <p><em>"我觉得艾客众筹平台第一风控做的比较好；第二收益+消费权益，综合收益好；第三服务互动非常好。"</em></p>
+                                </div>
+                            </div><!-- testimonial item -->
+                        </div><!-- swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="image">
+                                    <img src="/Lib/Home/Index/images/testimonial/testimonial_02.jpg" alt="client image" class="img-responsive">
+                                </div>
+                                <div class="content">
+                                    <h4>许达来</h4>
+                                    <span>顺为资本创始合伙人/CEO</span>
+                                    <p><em>"怎么样用互联网的技术，或者模式来改造传统行业?房地产和金融也是我们关注的两个垂直行业， 艾客众筹很好地结合了房地产和金融的这两个大板块"</em></p>
+                                </div>
+                            </div><!-- testimonial item -->
+                        </div><!-- swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="image">
+                                    <img src="/Lib/Home/Index/images/testimonial/testimonial_03.jpg" alt="client image" class="img-responsive">
+                                </div>
+                                <div class="content">
+                                    <h4>张华</h4>
+                                    <span>众筹用户</span>
+                                    <p><em>"自从2018年初认识艾客众筹，就中了多彩的毒，一发不可收拾，很喜欢多彩这种投资理财与旅游相结合的模式，很符合我胃口，希望多彩能越办越好"</em></p>
+                                </div>
+                            </div><!-- testimonial item -->
+                        </div><!-- swiper-slide -->
+
+                    </div><!-- swiper wrapper -->
+                    <div class="testimonial-pagination"></div>
+                </div><!-- testimonial slider -->
+            </div><!-- container -->
+        </div><!-- overlay -->
+    </section><!-- testimonial -->
+    <!-- Testimonial section end -->
+    @* 最新资讯 *@
+    <!-- Blog section start -->
+    <section id="blog" class="blog padding-120">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 style="font-weight:900">我们最新的博客资讯</h1>
+                <p><i></i></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-item">
+                        <div class="image">
+                            <a href="single.html"><img src="/Lib/Home/Index/images/blog/blog_01.jpg" alt="blog image" class="img-responsive"></a>
+                        </div><!-- image -->
+                        <div class="content">
+                            <h4><a href="single.html">艾客众筹加入中国互金协会成为行业自律的中坚力量</a></h4>
+                            <ul class="post-meta">
+                                <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="">中国网</a></li>
+                                <li><span><i class="fa fa-comments" aria-hidden="true"></i></span><a href="">评论我们</a></li>
+                                <li><span><i class="fa fa-heart" aria-hidden="true"></i></span><a href="">100</a></li>
+                            </ul>
+                            <p>艾客众筹首席战略官马云表示，这是对艾客众筹合规矩稳健经营的一种肯定，更代表艾客众筹的发展进入了新阶段，我们将积极切实履行会员职责...</p>
+                            <a href="single.html" class="default-button">查看详情</a>
+                        </div><!-- content -->
+                    </div><!-- blog-item -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-item">
+                        <div class="image">
+                            <a href="single.html"><img src="/Lib/Home/Index/images/blog/blog_02.jpg" alt="blog image" class="img-responsive"></a>
+                        </div><!-- image -->
+                        <div class="content">
+                            <h4><a href="single.html">艾客众筹18年成交金额突破20亿元成为行业创新的领导者</a></h4>
+                            <ul class="post-meta">
+                                <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="">网易新闻</a></li>
+                                <li><span><i class="fa fa-comments" aria-hidden="true"></i></span><a href="">评论我们</a></li>
+                                <li><span><i class="fa fa-heart" aria-hidden="true"></i></span><a href="">290</a></li>
+                            </ul>
+                            <p>8月14日，全球专业实体空间投资平台艾客众筹宣布，平台成交金额突破20亿元，总投资规模达162.83亿元，引领行业创新发展，也以为着平台迎来...</p>
+                            <a href="single.html" class="default-button">查看详情</a>
+                        </div><!-- content -->
+                    </div><!-- blog-item -->
+                </div>
+
+                <div class="col-md-4 hidden-sm col-xs-12">
+                    <div class="blog-item">
+                        <div class="image">
+                            <a href="single.html"><img src="/Lib/Home/Index/images/blog/blog_03.jpg" alt="blog image" class="img-responsive"></a>
+                        </div><!-- image -->
+                        <div class="content">
+                            <h4><a href="single.html">赵耕回复雷军：艾客众筹是谁，艾客众筹为什么而奋斗</a></h4>
+                            <ul class="post-meta">
+                                <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a href="">腾讯新闻</a></li>
+                                <li><span><i class="fa fa-comments" aria-hidden="true"></i></span><a href="">评论我们</a></li>
+                                <li><span><i class="fa fa-heart" aria-hidden="true"></i></span><a href="">23</a></li>
+                            </ul>
+                            <p>艾客众筹秉持“别急”的企业文化，一直坚持精挑细选地提供最优质的空间项目给用户，而不是快速粗制滥造，用户的投资和消费体验，永远是我这8年来的最幸运的...</p>
+                            <a href="single.html" class="default-button">查看详情</a>
+                        </div><!-- content -->
+                    </div><!-- blog-item -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </section><!-- blog -->
+    <!-- Blog section end -->
+    @* 联系我们 *@
+    <!-- Contact us section start -->
+    <section id="contact" class="contact-us padding-120">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 style="font-weight:900">联系我们</h1>
+                <p><i>"沟通使让你我之间更近一步，我们期待您的意见和建议！"</i></p>
+            </div><!-- section header -->
+
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <div class="contact-form">
+                        <form action="">
+                            <input type="text" name="name" placeholder="您的姓名" class="contact-input">
+                            <input type="email" name="email" placeholder="您的邮箱" class="contact-input">
+                            <textarea rows="6" class="contact-input" placeholder="留言信箱"></textarea>
+                            <input type="submit" value="发送" class="contact-submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon">
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>广西建设职业技术学院艾客众筹网络科技有限公司</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">
+                                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>+8666-666-669</p>
+                                <p>07-666666 </p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">
+                                <span><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="content">
+                                <p>aikezc@yourmail.com</p>
+                                <p>aike@yourmail.com</p>
+                            </div>
+                        </div>
+                    </div><!-- contact-info -->
+
+                </div>
+            </div><!-- row -->
+
+
+        </div><!-- container -->
+    </section><!-- client -->
+    <!---<div id="contact_map"></div>--->
+    <!-- Contact us section end -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>广西艾客众筹网络科技有限公司 京ICP备14***954号<br> Copyright &copy; 2017<a href="#">AIKEZC.COM</a> -打造最顶尖的众筹平台 <a href="#" target="_blank">认真对待每一个梦想</a></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <a class="page-scroll scroll-top" href="#banner"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            </div><!-- row -->
+        </div><!-- container -->
+    </footer>
+
+
+
+    <!-- jQuery -->
+
+
+    <script src="~/Lib/Home/Index/assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+
+    <script src="~/Lib/Home/Index/assets/js/bootstrap.min.js"></script>
+    <!-- Easing -->
+
+    <script src="~/Lib/Home/Index/assets/js/jquery.easing.min.js"></script>
+    <!-- Isotop -->
+
+
+    <script src="~/Lib/Home/Index/assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- Lightcase -->
+    <script src="assets/js/lightcase.js"></script>
+
+    <!-- Swiper -->
+
+    <script src="~/Lib/Home/Index/assets/js/swiper.jquery.min.js"></script>
+    <!-- WOW js -->
+
+    <script src="~/Lib/Home/Index/assets/js/wow.min.js"></script>
+
+    <script src="~/Lib/Home/Index/assets/js/custom.js"></script>
+
+    <script src="~/Common/Index/digitalScroll.js"></script>
+    <script src="~/Common/Index/JavaScript.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+}
+.header{
+    width:160px;
+    height:1498px;
+    float:left;
+}
+.right{
+    float:left;
+}
+.Updata{
+    float:right;
+}

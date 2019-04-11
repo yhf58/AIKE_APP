@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AIKE众筹管理系统</title>
+
+    <link href="../Common/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="../Common/jquery-2.1.1.js"></script>
+    <script src="../Common/bootstrap/js/bootstrap.js"></script>
+    <link href="../Lib/Admin/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <!--导航-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="../Lib/Admin/img/logo.jpg">
+                    </a>
+                    <p>AIKE个人中心</p>
+                </div>
+
+                <div class="nav_bar-rigth">
+
+
+
+                    <!--下拉按钮-->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">系统设置</a></li>
+                            <li><a href="../Home/Logout"> 退出登录</a></li>
+                        </ul>
+                    </div>
+                    <!--下拉按钮-->
+
+                </div>
+            </div>
+        </nav>
+        <!--导航-->
+
+        <div class="side">
+
+            <div class="s_top">
+                <div class="admin"></div>
+
+                @*@if (DateTime.Now.Hour >= 6 && DateTime.Now.Hour < 11)
+                    {
+                        <p>@Session["user"],早上好！</p>
+                    }
+                    @if (DateTime.Now.Hour >= 11 && DateTime.Now.Hour <= 12)
+                    {
+                        <p>@Session["user"],中午好！</p>
+                    }
+                    @if (DateTime.Now.Hour >= 13 && DateTime.Now.Hour <= 18)
+                    {
+                        <p>@Session["user"],下午好</p>
+                    }
+                    @if (DateTime.Now.Hour >= 19 && DateTime.Now.Hour <= 23)
+                    {
+                        <p>@Session["user"],晚上好</p>
+                    }
+                    @if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour <= 5)
+                    {
+                        <p>@Session["user"],凌晨时</p>
+                    }*@
+            </div>
+
+            <a class="nav-header collapsed">
+                <i class="glyphicon glyphicon-user"></i>
+                <a href="../Home/Person">个人资料</a>
+            </a>
+
+            <br /> <br />
+            <a href="#systemSetting2" class="nav-header collapsed" data-toggle="collapse">
+                <i class="glyphicon glyphicon-book"></i>
+                <a href="../Home/Collect"> 我的收藏</a>
+            </a>
+
+            <br /><br />
+
+            <a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+                <i class="glyphicon glyphicon-comment"></i>
+                <a href="../Home/Subsidize">资助项目</a>
+            </a>
+            <br /> <br />
+
+            <a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+                <i class="glyphicon glyphicon-comment"></i>
+                <a href="../Home/Identification">信息认证</a>
+            </a>
+            <br /> <br />
+            <a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+                <i class="glyphicon glyphicon-comment"></i>
+                <a href="../Home/ProjectManagement">项目管理</a>
+            </a>
+            <br /> <br />
+            <a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+                <i class="glyphicon glyphicon-comment"></i>
+                <a href="../Home/Message">我的消息</a>
+            </a>
+            @*<ul id="systemSetting4" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <li class="active"><a href="../Admin/EditNews"><i class="glyphicon glyphicon-user"></i>&nbsp;发布资讯</a></li>
+                    <li class="active"><a href="../Admin/NewsList"><i class="glyphicon glyphicon-user"></i>&nbsp;资讯列表</a></li>
+                </ul>*@
+            <br /><br />
+            <div class="s_bottom">
+                <p>@@AIKE众筹管理系统</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="admin_top">
+                <ul id="ul_top">
+                    <li class="active"><a href="../Admin/Index">首页</a></li>
+                </ul>
+            </div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+    @*<script>
+            $(function () {
+                $(".nav-header").click(function () {
+                    $(".ap").remove();
+                    var li = $(this).text();
+                    var newli = document.createElement("li");
+                    newli.innerHTML = "<a class='ap'>" + li + "</a>";
+                    newli.className = "ap";
+
+                    document.getElementById("ul_top").appendChild(newli);
+
+                });
+            });
+        </script>*@
+</body>
+</html>

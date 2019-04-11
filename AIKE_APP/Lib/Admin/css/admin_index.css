@@ -1,0 +1,38 @@
+﻿
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.alert{
+    letter-spacing: 5px;
+}
+.wel{
+    width:100%;
+    height:250px;
+   
+}
+.t1{
+    width:200px;
+    height:150px;
+   
+    text-align:center;
+    float:left;
+    margin-left:35px;
+}
+
+.table {
+    height: 420px;
+    
+    line-snap:inherit;
+}
+
+.bottom{
+    width:100%;
+    height:50px;
+   
+}
+.bottom>p{
+    text-align:center;
+    line-height:50px;
+}

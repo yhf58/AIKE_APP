@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="../Lib/Home/Index/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Lib/Home/Index/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <!-- Preloader start here -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="ld-child"></div>
+                <div class="ld-child ld-child2"></div>
+            </div>
+        </div>
+        <!--头部-->
+        <header>
+            <nav class="main-menu menu-fixed">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" style="font-size:30px;color:#ffffff;text-decoration:content;line-height: 90px;">艾客众筹</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="#banner">首页</a></li>
+                            <li><a class="page-scroll" href="#about">项目</a></li>
+                            <li><a class="page-scroll" href="#services">新闻</a></li>
+                            <li><a class="page-scroll" href="#skills">APP</a></li>
+                            <li><a class="page-scroll" href="#portfolio">关于</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav>
+        </header>
+        <!--头部结束-->
+        @RenderBody()
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p>广西艾客众筹网络科技有限公司 京ICP备14***954号<br> Copyright &copy; 2017<a href="#">AIKEZC.COM</a> -打造最顶尖的众筹平台 <a href="#" target="_blank">认真对待每一个梦想</a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <a class="page-scroll scroll-top" href="#banner"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div><!-- row -->
+            </div><!-- container -->
+        </footer>
+    </div>
+    <script src="~/Lib/Home/Index/assets/js/jquery.min.js"></script>
+
+    <script src="~/Lib/Home/Index/assets/js/wow.min.js"></script>
+
+    <script src="~/Lib/Home/Index/assets/js/custom.js"></script>
+
+    <script src="~/Common/Index/digitalScroll.js"></script>
+    
+</body>
+</html>

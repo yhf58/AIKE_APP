@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+}
+@using AIKE_Model;
+<link href="~/Common/layUI/theme/layui.css" rel="stylesheet" />
+<div class="panel-heading">资讯列表
+<table class="table">
+    <thead>
+        <tr>
+            <th>编号</th>
+            <th>标题</th>
+            <th>分类</th>
+            <th>发布时间</th>
+            <th>操作</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @*<tr>
+            <td>编号</td>
+            <td>标题</td>
+            <td>分类</td>
+            <td>时间</td>
+            <td>阅读量</td>
+            <td>
+
+                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">编辑</button>
+
+                <button class="btn btn-danger" data-toggle="modal" data-target="#myModal2">删除</button>
+
+            </td>
+        </tr>*@
+        @foreach(Msg m in (List<Msg>)ViewData["newlist"])
+        {
+            <tr> <td>@m.ID</td>  <td>@m.Title</td>  <td>@m.MsgType</td> <td>@m.ExtensionTime</td>
+             <td>
+
+              <a href="../Admin/EditNews?id=@m.ID" class="btn btn-primary">编辑</a>
+
+              <button class="DeleteNew btn btn-danger">删除</button>
+
+              </td>
+          </tr>
+        }
+
+    </tbody>
+</table>
+</div>
+<script src="~/Common/layUI/jquery-3.1.1.js"></script>
+<script src="~/Common/layUI/layer.js"></script>
+<script>
+    $(function () {
+
+        $(".DeleteNew").click(function () {
+            $.ajax({
+                url: "../Admin/DeleteMsg",
+                dataType: "json",
+                data: { "id": $(this).parents("tr").children("td:eq(0)").text()},
+                success: function (data) {
+                    if (parseInt(data) == 1) {
+
+                        debugger
+                        layer.msg("删除成功！", { icon: 1 });
+
+                        setTimeout("location.href='../Admin/NewsList'", 2000);
+
+                    }
+                    if (parseInt(data) ==0) {
+                        layer.msg("删除失败！", { icon: 1 });
+
+                    }
+                },
+                error: function () {
+                    layer.msg("删除失败！", { icon: 1 });
+                }
+
+            });
+
+        });
+
+
+    });
+</script>

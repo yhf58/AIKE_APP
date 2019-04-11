@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+}
+<link href="~/Lib/Admin/css/admin_index.css" rel="stylesheet" />
+
+<!--后台主页-->
+<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-flag"></span>提示：如果还没充钱,请前面pay.58yhf.top充值！</div>
+
+<div class="tip">
+
+</div>
+
+<div class="wel">
+    <div class="alert alert-success" role="alert"> <p>欢迎使用AIKE后台管理系统</p></div>
+    <div class="t1">
+        <canvas id="myCanvas"></canvas>
+        <p>用户</p>
+    </div>
+    <div class="t1">
+        <canvas id="myCanvas2"></canvas>
+        <p>日访问量</p>
+    </div>
+    <div class="t1">
+        <canvas id="myCanvas3"></canvas>
+        <p>发布项目</p>
+    </div>
+    <div class="t1">
+        <canvas id="myCanvas4"></canvas>
+        <p>众筹总金额</p>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><span class="glyphicon glyphicon-hdd"></span>系统信息</div>
+    <!-- Table -->
+    <table class="table">
+        <tr><td>系统程序</td><td>ASP.NET&nbsp;</td><td>版本</td><td>1.0.0</td></tr>
+        <tr><td>数据库</td><td>AIKE_DB&nbsp;</td><td>数据库前缀</td><td>tb_</td></tr>
+        <tr><td>服务器操作系统</td><td>Liunx&nbsp;</td><td>服务器端口</td><td>80</td></tr>
+        <tr><td>服务器剩余空间</td><td>36134M&nbsp;</td><td>服务器时间	</td><td>@DateTime.Now.ToLongTimeString()</td></tr>
+        <tr><td>WEB服务器版本	</td><td>Jexus&nbsp;</td><td>服务器语种	</td><td>zh-CN,zh;q=0.9</td></tr>
+        <tr><td>POST方法提交限制	</td><td>50M&nbsp;</td><td>脚本超时时间	</td><td>300</td></tr>
+        <tr><td>脚本运行可占最大内存</td><td>128M&nbsp;</td><td>脚本上传文件大小限制	</td><td>50M</td></tr>
+    </table>
+</div>
+
+<div class="bottom">
+    <p>桂ICP备18010719号-1</p>
+</div>
+
+<script src="~/Lib/Admin/js/circle.js"></script>
+
+<script src="~/Common/jquery-3.1.1.js"></script>
+<script>
+    $(function () {
+
+        $.ajax({
+
+            url: "../Admin/Datas",
+            dataType: "json",
+            success: function (data) {
+                var user = data.Users;
+                var project = data.Projects;
+                var money = data.ZC_Money;
+                drawRing(100, 100, user);
+                drawRing2(100, 100,@Convert.ToInt32(System.Web.HttpContext.Current.Application["count"]));
+                drawRing3(100, 100, project);
+                drawRing4(100, 100, money/10000000);
+
+            },
+            error: function () {
+
+            }
+
+        });
+
+    });
+</script>
+

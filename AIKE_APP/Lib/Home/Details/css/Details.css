@@ -1,0 +1,382 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+/*项目详情*/
+#Exhibition {
+    width: 100%;
+    /*height:1300px;*/
+    overflow: hidden;
+}
+
+    #Exhibition .Title {
+        width: 90%;
+        height: 30px;
+        margin: auto;
+        margin-top: 150px;
+    }
+
+        #Exhibition .Title p {
+            font-size: 30px;
+            font-family: "宋体";
+            font-weight: 700;
+            color: #000000;
+        }
+
+            #Exhibition .Title p span {
+                float: right;
+                font-size: 18px;
+                color: #9f9d9e;
+            }
+
+#details {
+    width: 95%;
+    height: 400px;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+    #details .left {
+        width: 60%;
+        background-size: cover;
+        overflow: hidden;
+        float: left;
+    }
+
+        #details .left img {
+            width: 760px;
+            height: 400px;
+        }
+
+    #details .right {
+        width: 37%;
+        height: 400px;
+        overflow: hidden;
+        float: right;
+        padding-top: 10px;
+        background-color: #eff7f9;
+    }
+
+
+        #details .right .Raise {
+            width: 90%;
+            height: 40px;
+            margin: 0px auto;
+        }
+
+            #details .right .Raise p {
+                font-size: 20px;
+                line-height: 40px;
+            }
+
+            #details .right .Raise .glyphicon {
+                font-size: 15px;
+                float: right;
+                line-height: 40px;
+            }
+
+#Progress {
+    width: 90%;
+    height: 100px;
+    border: 1px solid #ffffff;
+    margin: 0px auto;
+    margin-top: 25px;
+    background-color: #ffffff;
+    border-radius: 8px 8px 8px 8px;
+}
+
+    #Progress .progress {
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+#Support {
+    width: 90%;
+    height: 30px;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+    #Support p {
+        width: 50%;
+        line-height: 30PX;
+        float: left;
+        overflow: hidden;
+    }
+
+        #Support p b {
+            color: #cc0909;
+        }
+
+#End {
+    width: 90%;
+    height: 60px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+    #End p {
+        font-size: 16px;
+    }
+
+    #End span {
+        color: red;
+    }
+
+#bat {
+    width: 70%;
+    height: 60px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+    #bat .btn {
+        width: 100%;
+        height: 90%;
+        margin: 0px auto;
+    }
+
+#content {
+    width: 95%;
+    margin: 0px auto;
+    border-bottom: 5px solid #9f9d9e;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+#xq_img {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 30px;
+}
+
+    #xq_img img {
+        width: 100%;
+        height: 600px;
+    }
+/*评论模块*/
+#Comment {
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+    #Comment .lead {
+        margin-left: 50px;
+    }
+
+    #Comment .comment_box {
+        width: 80%;
+        height: auto;
+        margin: 0px auto;
+    }
+
+    #Comment .ID_img {
+        width: 60px;
+        height: 40px;
+    }
+
+        #Comment .ID_img img {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border: 1px solid #808080;
+            float: left;
+        }
+
+.form-control {
+    width: 97%;
+    
+}
+
+.text-count {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    bottom: 80px;
+    left: 91%;
+    line-height: 30px;
+}
+
+.btn {
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+#Opinion {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+    #Opinion .userdata {
+        font-size: 20px;
+        font-weight: 600;
+        padding-left: 20px;
+        font-family: "宋体";
+    }
+
+    #Opinion .userid {
+        height: 40px;
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+        #Opinion .userid p {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: "宋体";
+            color: red;
+        }
+
+            #Opinion .userid p span {
+                color: #000000;
+            }
+
+    #Opinion .txtNR {
+        width: 85%;
+        height: auto;
+        margin-left: 100px;
+        margin-bottom: 15px;
+    }
+
+    #Opinion .Time {
+        width: 85%;
+        margin-left: 100px;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 40px;
+    }
+
+        #Opinion .Time a {
+            float: right;
+            margin-right: 7px;
+            color: #0026ff;
+        }
+
+        #Opinion .Time span {
+            font-size: 15px;
+        }
+
+    #Opinion .px {
+        width: 88%;
+        margin: 0px auto;
+        border: 1px dashed #9f9d9e;
+        margin-bottom: 10px;
+    }
+
+#txtcontent p {
+    line-height: 30px;
+    text-indent: 35px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: "宋体";
+    margin-bottom: 50px;
+}
+/*模态框样式*/
+#Choice {
+    width: 100%;
+   
+    height: 100%;
+    float: left;
+}
+
+#payment {
+    width: 100%;
+  
+    
+    float: left;
+}
+
+#Return {
+    width: 40%;
+    height: 100%;
+    border-left: 1px dashed #9f9d9e;
+    float: right;
+}
+    #Return .r1 {
+        width: 100%;
+        height: 23.5%;
+        border-bottom: 1px dashed red;
+    }
+#Return .r2{
+    width:100%;
+    height:30%;
+    border-bottom:1px dashed #9f9d9e;
+}
+    #Return .r2 .balance{
+        font-size:25px;
+        padding:20px;
+    }
+    #Return .r2 .money{
+        padding-top:20px;
+        width:50%;
+        height:60px;
+       margin:0px auto;
+       font-size:30px;
+       text-align:center;
+      line-height:60px;     
+    }
+#payment .Recharge {
+    width: 80%;
+    height: 80%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.layui-input-block .layui-input {
+    
+}
+.Recharge .txtcz{
+    font-size:30px;
+    text-align:center;
+    margin-top:20px;
+}
+.Recharge .txtTips{
+    text-align:center;
+    margin-top:10px;
+}
+.Recharge .layui-form-item {
+    margin-top: 60px;
+    padding-right:15px;
+}
+.Recharge .btnzf{
+   
+   margin-top:100px;
+}
+.Recharge .btnzf .layui-btn{
+   margin-left:40px;
+}
+#Profit{
+    float:left;
+   
+    width:60%;
+    height:100%;
+}
+#Profit .c1 {
+    width: 100%;
+    height: 33%;
+  
+}
+    #Profit .profItimg {
+        width: 30%;
+        height: 100%;
+       
+        
+    }
+    #Profit .profitItimg img {
+        width: 30%;
+        height: 180px;       
+        margin-top: 8px;
+        float: left;
+        padding-right:20px;
+        margin-left:3px;
+    }
+    #Profit .chocetxt p{
+        line-height:25px;
+        font-size:15px;
+        
+    }

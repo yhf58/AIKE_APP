@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "ProjectReturn";
+    Layout = "~/Views/Shared/Project/Project.cshtml";
+}
+
+<link href="~/Common/layUI/theme/layui.css" rel="stylesheet" />
+<link href="~/Common/Project/ProjectReturn.css" rel="stylesheet" />
+
+
+<div class="Right">
+
+    <div class="ReturnSheZhi">
+        <span>筹集金额:<input type="tel" id="ProMoney" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " /><font id="Tips">*输入的金额在10-100000000内</font></span>
+        <span>限定人数:<input type="tel" id="ProNumbers" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " /><font id="Tips">*输入的人数在1-1000000内</font></span>
+        <span>回报时间:<input type="tel" id="ProTime" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " /><font id="Tips">*设定众筹成功后回报的时间</font></span>
+        <span>回报内容:<input type="text" id="ProContent" class="ReturnText" /></span>
+        <div class="RetunButtons">
+            <button type="button" class="btn btn-success" id="AddBtn">添加(Add To)</button>
+
+            <button type="button" class="btn btn-success" id="Eliminate">清除(Eliminate)</button>
+        </div>
+
+    </div>
+
+    <table class="table table-striped" id="ProRetunTable">
+        <tr>
+            <td>编号</td>
+            <td style="width:30%;">回报内容</td>
+            <td>限定人数</td>
+            <td>金额</td>
+            <td>回报时间</td>
+            <td>编辑</td>
+        </tr>
+    </table>
+
+    <!-- 按钮 -->
+    <div class="BigButtonss">
+        <button type="button" class="btn btn-success" id="Pre">
+            @*<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>*@
+            上一步
+        </button>
+
+        <button type="button" class="btn btn-success" id="Nex">
+            下一步
+            @*<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>*@
+
+        </button>
+
+    </div>
+
+</div>
+<script src="~/Common/Project/jquery-3.1.1.js"></script>
+<script src="~/Common/layUI/layer.js"></script>
+<script src="~/Common/Project/ProjectRetun.js"></script>
+
+

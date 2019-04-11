@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>提交成功</title>
+    <style>
+        .bordes {
+            width: 60%;
+            height: 600px;
+            margin: 0px auto;
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            display: block;
+        }
+
+            .bordes div {
+                margin-left: 3%;
+                margin-top: 5%;
+                font-family: '微软雅黑';
+                font-weight: 900;
+            }
+    </style>
+    <link href="~/Common/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script>
+        var num = 5;
+        var int= setInterval("clock()", 1000);
+        function clock() {
+            num > 0 ? num-- : clearInterval(int);
+            document.getElementById("time").innerHTML = num;
+            if (num == 0) {
+                location.href = '/Home/Index';
+            }
+        }
+    </script>
+
+</head>
+<body style="background-image: url('../../../Images/fancy_deboss.png')">
+    <div class="bordes">
+        <div>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            &nbsp;
+            提交成功！项目信息正在进行审核(三个工作日内审核完毕)。
+            <span>
+                <a id="time">5</a>
+            </span>秒后<a href="../Home/Index">返回首页</a>
+        </div>
+    </div>
+
+</body>
+</html>

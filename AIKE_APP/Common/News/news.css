@@ -1,0 +1,30 @@
+﻿
+#content{
+    width: 100%;
+    height:auto;
+    
+    margin-top: 50px;
+   padding:50px;
+}
+#content img{
+     width:800px;
+     height:380px;
+}
+.title {
+    width: 800px;
+    height: 30px;
+   
+    font-size: 18px;
+    font-weight: 700;
+}
+.date{
+    width: 800px;
+    height: 30px;
+   
+    text-align:right;
+  
+}
+#newlist li{
+    width:800px;
+    margin-top:20px;
+}

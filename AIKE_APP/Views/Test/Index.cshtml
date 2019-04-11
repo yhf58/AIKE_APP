@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+@using AIKE_Model;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Common/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+
+            $("#btn").click(function () {
+                $.ajax({
+
+                    url: "../Test/test",//提交地址：控制器/方法
+                    data: { "name": $("#name").val() },
+                    success: function (data) {
+                        debugger
+                        alert(data[0])
+                    },
+                    error: function () {
+
+                    }
+                });
+
+
+            });;
+
+        });
+    </script>
+</head>
+<body>
+    <div> 
+        <table>
+            @foreach (Userinfo u in (List<Userinfo>)ViewData["list"])
+            { 
+            <tr> <td>@u.UserID</td>  <td>@u.NickName</td> <td>@u.AccountNumber</td>  <td>@u.Gender</td></tr>
+            }
+        </table>
+        <input type="text" id="name" />
+        <button id="btn">提交</button>
+    </div>
+</body>
+</html>

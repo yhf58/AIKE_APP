@@ -1,0 +1,262 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Home/_LayoutHead.cshtml";
+}
+
+@using AIKE_Model;
+@{
+    List<ProjectMsgInfo> p = (List<ProjectMsgInfo>)ViewData["projectMsg"];
+}
+<!DOCTYPE html>
+<link href="../Lib/Home/Index/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Font-Awesome -->
+<link href="../Lib/Home/Index/assets/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Lightcase -->
+<link href="../Lib/Home/Index/assets/css/lightcase.css" rel="stylesheet" />
+
+<!-- Swiper -->
+<link href="../Lib/Home/Index/assets/css/swiper.min.css" rel="stylesheet" />
+
+<!-- Animate -->
+<link href="../Lib/Home/Index/assets/css/animate.css" rel="stylesheet" />
+
+<!-- Style -->
+<link href="../Lib/Home/Index/assets/css/style.css" rel="stylesheet" />
+
+<!-- Responsive -->
+<link href="../Lib/Home/Index/assets/css/responsive.css" rel="stylesheet" />
+<!--Details-->
+<link href="~/Lib/Home/Details/css/Details.css" rel="stylesheet" />
+<!--表情包样式-->
+<link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/Lib/Home/Details/css/nanoscroller.css" rel="stylesheet" />
+<link href="~/Lib/Home/Details/css/emoji.css" rel="stylesheet" />
+<link href="~/Common/layUI/theme/layui.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body data-spy="scroll">
+
+    <!--项目详情-->
+    <div style="height:auto;width:70%;border:1px solid #f2eeee;background-color:#ffffff;margin:0px auto;">
+        <!--项目展示-->
+        <label id="ProjectID">@Request["ProjectID"].ToString()</label>
+
+        <!--标题-->
+        <div id="Exhibition">
+            <div class="Title"><p>@p[0].ProjectName<a href="#"><span class="glyphicon glyphicon-share">分享</span></a></p></div>
+            <div id="details">
+                <div class="left">
+
+                    @*<img src="~/Lib/Home/Details/img/@p[0].ProjectCover" />*@
+                    <img src="~/Images/@p[0].ProjectCover" />
+                </div>
+                <div class="right">
+                    <div class="Raise">
+                        <p>目前筹集金额：￥<span style="color:red">@p[0].Raised_money.ToString().Substring(0, 8)</span><span class="glyphicon glyphicon-heart">@p[0].Like_Count</span></p>
+                    </div>
+                    <div id="Progress">
+                        <!--进度条-->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+
+                            </div>
+                            <span>45%</span>
+                        </div>
+                        <div id="Support">
+                            <p><span class="glyphicon glyphicon-user">&nbsp;支持人数：</span><b>@p[0].Support_man</b>人</p>
+                            <p><span class="glyphicon glyphicon-time">&nbsp;截止时间：</span><b>@p[0].ReleaseTime.ToString().Substring(0, 8)</b>天</p>
+                        </div>
+                        <div id="End">
+                            <p>此项目须在 <span>@p[0].RaiseDays</span>天 后，获得¥<span>@p[0].RaiseMoney.ToString().Substring(0, 9)</span>的支持才可成功</p>
+                        </div>
+                        <div id="bat">
+                            @*<button type="button" class="btn btn-warning">我要支持</button>*@
+                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                我要支持
+                            </button>
+                        </div>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width:50%;">
+                                <div class="modal-content" style="width: 1000px; margin-right: 500px;">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            支付中心
+                                        </h4>
+                                    </div>
+                                    <!--添加文本内容扫码支付-->
+                                    <div style="height:600px;">
+                                        <div id="Choice">
+                                            <div id="Profit">
+                                                <div class="c1">
+                                                    <div class="profitItimg">
+                                                        <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
+                                                    </div>
+                                                    <div class="chocetxt">
+                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
+                                                        <p>邮费：免邮</p>
+                                                        <p>
+                                                            预计回报发送时间：<span>项目成功后的<b>30</b>天内</span>
+                                                        </p>
+                                                        <p>
+                                                            <button type="button" class="btn btn-success r_button"><span>￥</span>75</button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="c1">
+                                                    <div class="profitItimg">
+                                                        <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
+                                                    </div>
+                                                    <div class="chocetxt">
+                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
+                                                        <p>邮费：免邮</p>
+                                                        <p>
+                                                            预计回报发送时间：<span>项目成功后的<b>30</b>天内</span>
+                                                        </p>
+                                                        <p>
+                                                            <button type="button" class="btn btn-success"><span>￥</span>75</button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="c1">
+                                                    <div class="profitItimg">
+                                                        <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
+                                                    </div>
+                                                    <div class="chocetxt">
+                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
+                                                        <p>邮费：免邮</p>
+                                                        <p>
+                                                            预计回报发送时间：<span>项目成功后的<b>30</b>天内</span>
+                                                        </p>
+                                                        <p>
+                                                            <button type="button" class="btn btn-success"><span>￥</span>75</button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Return">
+                                                <div class="r2">
+                                                    <p class="balance">我的余额（元)</p>
+                                                    <p class="money">0.00</p>
+                                                </div>
+                                                <div id="payment">
+                                                    <div class="Recharge">
+                                                        <p class="txtcz">充值</p>
+                                                        <p class="txtTips">充值页面将跳转到支付页面完成</p>
+                                                        <div class="layui-form-item">
+                                                            <label class="layui-form-label">金额</label>
+                                                            <div class="layui-input-block">
+                                                                <input type="text" name="title" required lay-verify="required" placeholder="请输入金额" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                        </div>
+                                                        <div class="btnzf">
+                                                            <button class="layui-btn layui-btn-radius">微信支付</button>
+                                                            <button class="layui-btn layui-btn-radius layui-btn-normal">支付宝支付</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--底部说明-->
+                                    <div class="modal-footer">
+                                        <p>如支付有疑问请联系24小时在线客服</p>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--文字内容-->
+        <div id="content">
+            <div id="xq_img">
+                <img src="~/Images/@p[0].ProjectCover" />
+            </div>
+            <div id="txtcontent">
+                <p>@p[0].ProjectDetails</p>
+            </div>
+        </div>
+        <!--评论-->
+        <div id="Comment">
+            <div class="comment_box">
+                <span class="ID_img">
+                    <a href="#">
+                        <img src="~/Images/@p[0].ProjectCover" />
+                    </a>
+                </span>
+                <p class="lead emoji-picker-container">
+
+                    <textarea class="form-control textarea-control" maxlength="160" placeholder="请输入..." data-emojiable="true"></textarea>
+                    <button type="button" class="btn btn-success" id="button">发表评论</button>
+                </p>
+            </div>
+            <div id="Opinion">
+                <div><span class="userdata">用户评论</span><span class="glyphicon glyphicon-level-up" style="color:#129eb7;"></span></div>
+                @foreach (CommentInfo c in (List<CommentInfo>)ViewData["cemment"])
+                {
+                    <div>
+                        <div class="userid">
+                            <p><span>用户名称：</span>@c.AccountNumber</p>
+                        </div>
+                        <div class="txtNR">
+                            @c.CommentContent
+                        </div>
+                        <div class="px"></div>
+                        <div class="Time">
+                            <span>@p[0].ReleaseTime</span><span><a href="#">回复</a></span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+</script>
+<script src="~/Lib/Home/Index/assets/js/jquery.min.js"></script>
+<!-- Bootstrap -->
+
+<script src="~/Lib/Home/Index/assets/js/bootstrap.min.js"></script>
+<!-- Easing -->
+
+<script src="~/Lib/Home/Index/assets/js/jquery.easing.min.js"></script>
+<!-- Isotop -->
+
+
+<script src="~/Lib/Home/Index/assets/js/isotope.pkgd.min.js"></script>
+
+<!-- Lightcase -->
+<script src="assets/js/lightcase.js"></script>
+
+<!-- Swiper -->
+
+<script src="~/Lib/Home/Index/assets/js/swiper.jquery.min.js"></script>
+<!-- WOW js -->
+
+<script src="~/Lib/Home/Index/assets/js/wow.min.js"></script>
+
+<script src="~/Lib/Home/Index/assets/js/custom.js"></script>
+<!--表情包js-->
+<script src="~/Lib/Home/Details/js/nanoscroller.min.js"></script>
+<script src="~/Lib/Home/Details/js/tether.min.js"></script>
+<script src="~/Lib/Home/Details/js/config.js"></script>
+<script src="~/Lib/Home/Details/js/util.js"></script>
+<script src="~/Lib/Home/Details/js/jquery.emojiarea.js"></script>
+<script src="~/Lib/Home/Details/js/emoji-picker.js"></script>
+<script src="~/Lib/Home/Details/js/Details.js"></script>
+<script src="~/Common/layUI/layer.js"></script>

@@ -1,0 +1,88 @@
+﻿<!Doctype html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>艾客新闻</title>
+    <meta name="viewport" content=" height = device-height,width = device-width,initial-scale = 1.0,minimum-scale = 1.0,maximum-scale = 1.0,user-scalable = no" />
+   
+    <link href="~/Lib/News/css/chinaz.css" rel="stylesheet" />
+    <script src="~/Lib/News/js/jquery-1.8.3.min.js"></script>
+    <script src="~/Lib/News/js/js.js"></script>
+</head>
+<body>
+    <div class="find_nav">
+        <div class="find_nav_left">
+            <div class="find_nav_list">
+                <ul>
+                    <li class="find_nav_cur"><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                    <li><a href="javascript:void(0)"></a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="search_logo" href="">搜索</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div style="text-align:center;margin:150px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+        <p>版权信息</p>
+        <p>备案号</p>
+    </div>
+    <script>
+        $.ajax({
+            type: 'post',
+            url: 'http://route.showapi.com/109-34',
+            dataType: 'json',
+            data: {
+                "showapi_timestamp": formatterDateTime(),
+                "showapi_appid": '91600', //这里需要改成自己的appid
+                "showapi_sign": '788abfa1d9e04ec7b303634e00ab8b8f', //这里需要改成自己的应用的密钥secret
+            },
+
+            error: function (XmlHttpRequest, textStatus, errorThrown) {
+                alert("操作失败!");
+            },
+            success: function (result) {
+                debugger
+                console.log(result) //console变量在ie低版本下不能用
+
+                for (var i = 0; i < 10; i++) {
+                    //alert(result.showapi_res_body.channelList[i]["name"])
+                    //var txt2 = $("<li>" + result.showapi_res_body.channelList[i]["name"] + "</li>");
+                    //$().append(xt);
+                    $(".find_nav_list ul li a:eq(" + i + ")").text(result.showapi_res_body.channelList[i]["name"]);
+                }
+            }
+        });
+        function formatterDateTime() {
+            var date = new Date()
+            var month = date.getMonth() + 1
+            var datetime = date.getFullYear()
+                + ""// "年"
+                + (month >= 10 ? month : "0" + month)
+                + ""// "月"
+                + (date.getDate() < 10 ? "0" + date.getDate() : date
+                    .getDate())
+                + ""
+                + (date.getHours() < 10 ? "0" + date.getHours() : date
+                    .getHours())
+                + ""
+                + (date.getMinutes() < 10 ? "0" + date.getMinutes() : date
+                    .getMinutes())
+                + ""
+                + (date.getSeconds() < 10 ? "0" + date.getSeconds() : date
+                    .getSeconds());
+            return datetime;
+        }
+    </script>
+   
+</body>
+
+</html>

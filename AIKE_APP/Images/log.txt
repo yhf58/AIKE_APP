@@ -1,0 +1,695 @@
+KEmulator v1.0.3 Running...
+Get classes from E:\JarQQ\qq2012_beta1_build0016_unsigned.jar
+Get class oq
+Get class ix
+Get class c
+Get class my
+Get class bh
+Get class ha
+Get class nc
+Get class bq
+Get class hj
+Get class lk
+Get class fr
+Get class pl
+Get class dz
+Get class js
+Get class ed
+Get class cl
+Get class ie
+Get class at
+Get class gm
+Get class mf
+Get class mo
+Get class kw
+Get class ox
+Get class dg
+Get class bo
+Get class hh
+Get class j
+Get class na
+Get class nj
+Get class bx
+Get class hq
+Get class fy
+Get class lr
+Get class aa
+Get class eb
+Get class jz
+Get class ek
+Get class kd
+Get class oe
+Get class il
+Get class cs
+Get class gt
+Get class mm
+Get class mv
+Get class be
+Get class ff
+Get class jg
+Get class dn
+Get class pi
+Get class jp
+Get class dw
+Get class q
+Get class nq
+Get class hx
+Get class ly
+Get class ah
+Get class ga
+Get class ei
+Get class kk
+Get class er
+Get class ol
+Get class cz
+Get class is
+Get class mt
+Get class bc
+Get class bl
+Get class he
+Get class fm
+Get class lf
+Get class pg
+Get class du
+Get class jn
+Get class pp
+Get class jw
+Get class x
+Get class nx
+Get class cg
+Get class ao
+Get class gh
+Get class ma
+Get class ax
+Get class gq
+Get class mj
+Get class ey
+Get class kr
+Get class os
+Get class db
+Get class iz
+Get class e
+Get class com.tencent.kqq2006.MainMIDlet
+Get class ne
+Get class hl
+Get class bs
+Get class ft
+Get class lm
+Get class pn
+Get class ju
+Get class ef
+Get class ig
+Get class cn
+Get class go
+Get class mh
+Get class av
+Get class gx
+Get class mq
+Get class ky
+Get class fa
+Get class oz
+Get class jb
+Get class di
+Get class pd
+Get class jk
+Get class dr
+Get class l
+Get class nl
+Get class bz
+Get class hs
+Get class lt
+Get class ac
+Get class ge
+Get class em
+Get class kf
+Get class og
+Get class cu
+Get class in
+Get class gv
+Get class bg
+Get class mx
+Get class fh
+Get class la
+Get class pb
+Get class dp
+Get class ji
+Get class pk
+Get class dy
+Get class jr
+Get class s
+Get class ns
+Get class cb
+Get class hz
+Get class gc
+Get class aj
+Get class gl
+Get class me
+Get class as
+Get class et
+Get class km
+Get class on
+Get class iu
+Get class ow
+Get class df
+Get class hg
+Get class bn
+Get class fo
+Get class lh
+Get class jy
+Get class ea
+Get class z
+Get class nz
+Get class ib
+Get class ci
+Get class mc
+Get class aq
+Get class gj
+Get class ml
+Get class az
+Get class gs
+Get class kt
+Get class ou
+Get class dd
+Get class dm
+Get class jf
+Get class g
+Get class p
+Get class ng
+Get class bu
+Get class hn
+Get class lo
+Get class fv
+Get class ag
+Get class lx
+Get class eh
+Get class ka
+Get class ob
+Get class cp
+Get class ii
+Get class ok
+Get class ir
+Get class bb
+Get class gz
+Get class ms
+Get class fc
+Get class dk
+Get class jd
+Get class pf
+Get class dt
+Get class jm
+Get class n
+Get class w
+Get class nn
+Get class hu
+Get class lv
+Get class ae
+Get class gg
+Get class an
+Get class eo
+Get class kh
+Get class oi
+Get class ip
+Get class cw
+Get class or
+Get class iy
+Get class da
+Get class hb
+Get class d
+Get class mz
+Get class bi
+Get class lc
+Get class fj
+Get class ll
+Get class fs
+Get class pm
+Get class jt
+Get class u
+Get class nu
+Get class cd
+Get class al
+Get class mg
+Get class au
+Get class gn
+Get class ko
+Get class ev
+Get class op
+Get class iw
+Get class oy
+Get class dh
+Get class ja
+Get class b
+Get class nb
+Get class bp
+Get class hi
+Get class k
+Get class fq
+Get class lj
+Get class ab
+Get class fz
+Get class ls
+Get class ec
+Get class ck
+Get class id
+Get class of
+Get class ct
+Get class im
+Get class gu
+Get class mn
+Get class kv
+Get class pa
+Get class do
+Get class jh
+Get class i
+Get class r
+Get class ni
+Get class hp
+Get class bw
+Get class fx
+Get class lq
+Get class gb
+Get class lz
+Get class ai
+Get class kc
+Get class ej
+Get class od
+Get class ik
+Get class cr
+Get class om
+Get class it
+Get class mu
+Get class bd
+Get class fe
+Get class lg
+Get class fn
+Get class ph
+Get class jo
+Get class dv
+Get class y
+Get class np
+Get class hw
+Get class ny
+Get class ch
+Get class ia
+Get class mb
+Get class ap
+Get class gi
+Get class eq
+Get class kj
+Get class cy
+Get class ot
+Get class dc
+Get class bk
+Get class hd
+Get class f
+Get class fl
+Get class le
+Get class fu
+Get class ln
+Get class po
+Get class jv
+Get class nw
+Get class cf
+Get class oa
+Get class co
+Get class ih
+Get class gp
+Get class mi
+Get class aw
+Get class ex
+Get class kq
+Get class fb
+Get class kz
+Get class jc
+Get class dj
+Get class nd
+Get class hk
+Get class m
+Get class br
+Get class nm
+Get class ht
+Get class lu
+Get class ad
+Get class ee
+Get class if
+Get class cm
+Get class oh
+Get class cv
+Get class io
+Get class mp
+Get class gw
+Get class kx
+Get class lb
+Get class fi
+Get class pc
+Get class dq
+Get class jj
+Get class t
+Get class nk
+Get class by
+Get class hr
+Get class nt
+Get class cc
+Get class ak
+Get class gd
+Get class el
+Get class ke
+Get class eu
+Get class kn
+Get class oo
+Get class iv
+Get class bf
+Get class a
+Get class mw
+Get class fg
+Get class fp
+Get class li
+Get class pj
+Get class dx
+Get class jq
+Get class nr
+Get class hy
+Get class ca
+Get class ic
+Get class cj
+Get class gk
+Get class md
+Get class ar
+Get class es
+Get class kl
+Get class ku
+Get class ov
+Get class de
+Get class hf
+Get class h
+Get class bm
+Get class nh
+Get class bv
+Get class ho
+Get class lp
+Get class fw
+Get class jx
+Get class kb
+Get class oc
+Get class cq
+Get class ij
+Get class mk
+Get class ay
+Get class gr
+Get class ez
+Get class ks
+Get class fd
+Get class dl
+Get class je
+Get class o
+Get class nf
+Get class bt
+Get class hm
+Get class no
+Get class hv
+Get class af
+Get class lw
+Get class eg
+Get class ep
+Get class ki
+Get class oj
+Get class cx
+Get class iq
+Get class gy
+Get class mr
+Get class ba
+Get class hc
+Get class bj
+Get class fk
+Get class ld
+Get class pe
+Get class jl
+Get class ds
+Get class v
+Get class nv
+Get class ce
+Get class gf
+Get class am
+Get class kg
+Get class en
+Get class kp
+Get class ew
+Custom.jar.getResourceStream: /icon.png (1110)
+Launch MIDlet class: com.tencent.kqq2006.MainMIDlet
+openRecordStore qq_rms_ver
+getRecord qq_rms_ver_1
+getRecord qq_rms_ver_2
+openRecordStore qq_rms_ver
+openRecordStore qq_rms_global
+openRecordStore qq_rms_ver
+openRecordStore qq_rms
+getRecord qq_rms_1
+openRecordStore qq_rms_buddys
+openRecordStore qq_rms_history
+openRecordStore qq_rms_ver
+openRecordStore qq_rms_config
+openRecordStore qq_rms_ver
+openRecordStore db0_q
+enumerateRecords db0_q
+openRecordStore qq_rms
+getRecord qq_rms_2
+getRecord qq_rms_3
+getRecord qq_rms_4
+getRecord qq_rms_5
+getRecord qq_rms_6
+Connect to: http://3g.qq.com/
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#microedition.platform=Nokia N71
+openRecordStore qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+enumerateRecords qq_rms_config
+openRecordStore rmsver
+openRecordStore guid_db
+getRecord guid_db_1
+openRecordStore db3
+enumerateRecords db3
+getRecord db3_5
+getRecord db3_6
+getRecord db3_7
+getRecord db3_8
+getRecord db3_9
+getRecord db3_10
+getRecord db3_11
+getRecord db3_9
+getRecord db3_8
+getRecord db3_5
+getRecord db3_6
+getRecord db3_7
+openRecordStore db5
+deleteRecord db3_8: OK
+addRecord db3_12
+openRecordStore db3
+listRecordStores
+deleteRecordStore db5
+getRecord qq_rms_7
+getRecord qq_rms_7
+getRecord qq_rms_30
+getRecord qq_rms_8
+Custom.jar.getResourceStream: emo_blocknum.png (262)
+Custom.jar.getResourceStream: /ribon.png (1180)
+getRecord qq_rms_9
+getRecord qq_rms_10
+getRecord qq_rms_11
+getRecord qq_rms_12
+getRecord qq_rms_13
+getRecord qq_rms_14
+getRecord qq_rms_15
+getRecord qq_rms_16
+getRecord qq_rms_17
+Custom.jar.getResourceStream: main.png (18129)
+getRecord qq_rms_18
+getRecord qq_rms_19
+Custom.jar.getResourceStream: emo_blocknum.png (262)
+Custom.jar.getResourceStream: /ribon.png (1180)
+openRecordStore qq_rms_global
+getRecord qq_rms_global_4
+Custom.jar.getResourceStream: /logo.png (7671)
+Custom.jar.getResourceStream: /logo1.png (2179)
+Custom.jar.getResourceStream: /num.png (1500)
+openRecordStore qq_m_token_rms
+Custom.jar.getResourceStream: /image.png (196)
+Connect to: http://conf.3g.qq.com/newConf/n
+SocketConnection: socket://211.136.236.82:14000
+host:211.136.236.82
+port:14000
+Custom.jar.getResourceStream: /takePic.png (752)
+getRecord qq_rms_20
+getRecord qq_rms_21
+getRecord qq_rms_22
+getRecord qq_rms_23
+getRecord qq_rms_24
+openRecordStore cache
+openRecordStore cookie_rms
+enumerateRecords cookie_rms
+getRecord qq_rms_25
+getRecord qq_rms_26
+getRecord qq_rms_27
+getRecord qq_rms_28
+Custom.jar.getResourceStream: data (5920)
+getRecord qq_rms_4
+getRecord qq_rms_29
+Connect to: http://mtt.3g.qq.com:28000
+openRecordStore db5
+Custom.jar.getResourceStream: data (5920)
+getRecord db3_5
+getRecord db3_6
+getRecord db3_7
+Connect to: http://mtt.3g.qq.com:28000
+openRecordStore guid_db
+deleteRecord db3_9: OK
+addRecord db3_13
+openRecordStore db3
+deleteRecord db3_10: OK
+addRecord db3_14
+openRecordStore db3
+deleteRecord db3_11: OK
+addRecord db3_15
+openRecordStore db3
+openRecordStore db3
+Custom.jar.getResourceStream: /favorite.png (415)
+Custom.jar.getResourceStream: /browser_search.png (864)
+Custom.jar.getResourceStream: /startPageApp.png (14647)
+Custom.jar.getResourceStream: /unknowface.png (623)
+Custom.jar.getResourceStream: /soundstatus.png (884)
+Custom.jar.getResourceStream: /tabicon.png (1669)
+Custom.jar.getResourceStream: /tabicon_internet.png (3716)
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.sonyericsson.imei=null
+System.getProperty#phone.imei=null
+System.getProperty#com.nokia.IMEI=null
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.siemens.imei=null
+System.getProperty#com.motorola.IMEI=null
+System.getProperty#com.samsung.imei=null
+System.getProperty#IMEI=null
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+Connect to: http://mttbro.3g.qq.com:8080/wup
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+Custom.jar.getResourceStream: /moerapp.png (3529)
+Custom.jar.getResourceStream: /magicdiamand.png (4379)
+Custom.jar.getResourceStream: /qqfamilylogo.png (4393)
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#com.sonyericsson.imei=null
+System.getProperty#phone.imei=null
+System.getProperty#com.nokia.IMEI=null
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.siemens.imei=null
+System.getProperty#com.motorola.IMEI=null
+System.getProperty#com.samsung.imei=null
+System.getProperty#IMEI=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.sonyericsson.imei=null
+System.getProperty#phone.imei=null
+System.getProperty#com.nokia.IMEI=null
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.siemens.imei=null
+System.getProperty#com.motorola.IMEI=null
+System.getProperty#com.samsung.imei=null
+System.getProperty#IMEI=null
+System.getProperty#microedition.platform=Nokia N71
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#microedition.platform=Nokia N71
+Connect to: http://mttbro.3g.qq.com:8080/wup
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+>>java.io.IOException: java.net.ConnectException: Connection timed out: connect
+>>	at javax.microedition.io.b.openOutputStream(Unknown Source)
+>>	at cu.a(Unknown Source)
+>>	at cu.run(Unknown Source)
+System.getProperty#com.sonyericsson.imei=null
+System.getProperty#phone.imei=null
+System.getProperty#com.nokia.IMEI=null
+System.getProperty#com.nokia.mid.imei=null
+System.getProperty#com.siemens.imei=null
+System.getProperty#com.motorola.IMEI=null
+System.getProperty#com.samsung.imei=null
+System.getProperty#IMEI=null
+Notify Destroyed
+Exiting Emulator

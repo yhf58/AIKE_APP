@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <form>
+        <p><input id="inputprice" type="text" name="inputprice" class="form-control" placeholder="请输入金额" required></p>
+
+        <div class="radio">
+            <label>
+                <p>
+                    <input type="radio" name="demo1" id="demo1-alipay" value="option1" checked="">
+                    支付宝支付
+                </p>
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <p>
+                    <input type="radio" name="demo1" id="demo1-weixin" value="option2">
+                    微信支付
+                </p>
+            </label>
+        </div>
+        <button type="button" id="demoBtn1">确认购买</button>
+    </form>
+
+    <form id='formpay' name='formpay' method='post' action='https://www.paypayzhu.com/api/pay'>
+        <input name='api_user' id='api_user' type='text' value='' />
+        <input name='price' id='price' type='text' value='' />
+        <input name='type' id='type' type='text' value='' />
+        <input name='redirect' id='redirect' type='text' value='' />
+        <input name='order_id' id='order_id' type='text' value='' />
+        <input name='order_info' id='order_info' type='text' value='' />
+        <input name='signature' id='signature' type='text' value='' />
+        <input type='submit' id='submitdemo1'>
+    </form>
+
+    <!-- Jquery files -->
+
+    <script src="~/Common/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        $().ready(function () {
+            function getistype() {
+                return ($("#demo1-alipay").is(':checked') ? "2" : "1");
+            }
+
+            $("#demoBtn1").click(function(){
+                $.post(
+                    "../Pay/Pay",
+                    {
+                        price : $("#inputprice").val(),
+                        type : getistype(),
+
+                    },
+                    function(data){
+                       console.log('a',data)
+            $("#api_user").val(data.data.api_user);
+            $("#price").val(data.data.price);
+            $('#type').val(data.data.type);
+            $('#redirect').val(data.data.redirect);
+            $('#order_id').val(data.data.order_id);
+            $('#order_info').val(data.data.order_info);
+            $('#signature').val(data.data.signature);
+            $('#submitdemo1').click();
+                    }, "json"
+                );
+            });
+            //$('#demoBtn1').click(function () {
+            //    $.ajax(
+            //        {
+            //            type: 'post',
+            //            url: '../Pay/Pay',
+            //            data: {
+            //                "price": $("#inputprice").val(),
+            //                "type": getistype()
+            //            },
+            //            dataType: 'json',
+            //            success: function (data) {
+            //                $("#api_user").val(data.api_user);
+            //                $("#price").val(data.price);
+            //                $('#type').val(data.type);
+            //                $('#redirect').val(data.redirect);
+            //                $('#order_id').val(data.order_id);
+            //                $('#order_info').val(data.order_info);
+            //                $('#signature').val(data.signature);
+
+
+            //                var e = document.createEvent("MouseEvents");
+
+            //                e.initEvent("click", true, true);
+
+            //                document.getElementById("submitdemo1").dispatchEvent(e);
+            //            },
+            //            error: function () {
+            //                alert("失败！");
+            //            }
+            //        }
+            //    )
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+
+            $("form>input").hide();
+
+        });
+    </script>
+</body>
+</html>

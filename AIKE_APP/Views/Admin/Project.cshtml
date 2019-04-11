@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewBag.Title = "Project";
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+}
+@using AIKE_Model;
+
+<link href="~/Common/layUI/theme/layui.css" rel="stylesheet" />
+<link href="~/Lib/Admin/css/bootstrap-switch.css" rel="stylesheet" />
+<script src="~/Lib/Admin/js/bootstrap-switch.min.js"></script>
+<script src="~/Common/layUI/layer.js"></script>
+<script>
+    $(function () {
+        $('input[type=checkbox]').bootstrapSwitch({ size: "small" });
+    });
+</script>
+<div class="panel panel-default">
+
+    <div class="panel-heading">项目管理</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>项目名称</th>
+                <th>项目类型</th>
+                <th>筹集总金额</th>
+                <th>审核状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @*<tr>
+                    <td>编号</td>
+                    <td>项目名称</td>
+                    <td>项目类型</td>
+                    <td>筹集总金额</td>
+                    <td> <input type="checkbox" /></td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">修改</button>
+
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal2">删除</button>
+
+                    </td>
+
+                </tr>*@
+            @foreach (Admin_ProjectInfo p in (List<Admin_ProjectInfo>)ViewData["projectinfo"])
+            {
+                <tr>
+                    <td>@p.ProjectID</td>
+                    <td>@p.ProjectName</td>
+                    <td>@p.ProjectTypeName</td>
+                    <td>@p.RaiseMoney</td>
+                    <td>@p.State</td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">修改</button>
+
+                        <button class="DeleteProject btn btn-danger" data-toggle="modal" data-target="#myModal2">删除</button>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!--模态框------------------------->
+
+
+
+
+<form method="post" action="#" class="form-horizontal" role="form" id="myForm" onsubmit="return ">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!--  定义模态框，过渡效果为淡入，id为myModal,tabindex=-1可以禁用使用tab切换，aria-labelledby用于引用模态框的标题，aria-hidden=true保持模态框在触发前窗口不可见  -->
+        <div class="modal-dialog">
+            <!--  显示模态框对话框模型（若不写下一个div则没有颜色）  -->
+            <div class="modal-content">
+                <!--  显示模态框白色背景，所有内容都写在这个div里面  -->
+
+                <div class="btn-info modal-header">
+                    <!--  模态框标题  -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!--  关闭按钮  -->
+                    <h4>修改用户信息</h4>
+                    <!--  标题内容  -->
+                </div>
+
+                <div class="modal-body">
+                    <!--  模态框内容，我在此处添加一个表单 -->
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label for="uname" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="uname" name="uname" class="form-control well" placeholder="请输入用户名" />
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <!--  模态框底部样式，一般是提交或者确定按钮 -->
+                    <button type="submit" class="btn btn-info">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div>
+    </div> <!-- /.modal -->
+
+
+</form>
+</div>
+
+
+<!--第二--------------------------------------->
+
+<form method="post" action="#" class="form-horizontal" role="form" id="myForm" onsubmit="return ">
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!--  定义模态框，过渡效果为淡入，id为myModal,tabindex=-1可以禁用使用tab切换，aria-labelledby用于引用模态框的标题，aria-hidden=true保持模态框在触发前窗口不可见  -->
+        <div class="modal-dialog">
+            <!--  显示模态框对话框模型（若不写下一个div则没有颜色）  -->
+            <div class="modal-content">
+                <!--  显示模态框白色背景，所有内容都写在这个div里面  -->
+
+                <div class="btn-info modal-header">
+                    <!--  模态框标题  -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!--  关闭按钮  -->
+                    <h4>是否删除该项目</h4>
+                    <!--  标题内容  -->
+                </div>
+
+                <div class="modal-body">
+                    <!--  模态框内容，我在此处添加一个表单 -->
+                    <form class="form-horizontal" role="form">
+
+                        @*<div class="form-group">
+                                <label for="uname" class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="uname" name="uname" class="form-control well" placeholder="请输入用户名" />
+                                </div>
+                            </div>*@
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <!--  模态框底部样式，一般是提交或者确定按钮 -->
+                    <button type="submit" class="Delete_ID btn btn-info">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div>
+    </div> <!-- /.modal -->
+
+    <script src="~/Lib/Admin/js/apend.js"></script>
+</form>
+<!--模态框------------------------->
+
+<script>
+    $(function () {
+        var d_id = 0;
+        $(".DeleteProject").click(function () {
+         d_id=$(this).parents("tr").children("td:eq(0)").text();
+        });
+
+        $(".Delete_ID").click(function () {
+            //alert(d_id)
+            $.ajax({
+                url: "../Admin/DeleteProject",
+                dataType: "json",
+                data: { "id":d_id },
+                success: function (data) {
+                    if (parseInt(data) == 1) {
+                        layer.msg("删除成功！", { icon: 1 });
+                        setTimeout(" location.href = '../Admin/Project'", 2000);
+                    }
+                    else {
+                        layer.msg("删除失败！", { icon:2});
+                    }
+                },
+                error: function () {
+                    layer.msg("删除失败！", { icon: 2 });
+                }
+
+            });
+        });;
+    });
+</script>
+

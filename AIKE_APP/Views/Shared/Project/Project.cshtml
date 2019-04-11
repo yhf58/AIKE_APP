@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Common/Project/Project.css" rel="stylesheet" />
+    <link href="~/Common/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Common/jquery-3.1.1.js"></script>
+    <script src="~/Common/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Common/Project/Project.js"></script>
+
+</head>
+<body style=" background-image: url('../../../Images/fancy_deboss.png');
+">
+    <div class="Frame">
+        <!-- 左边栏 -->
+        <div class="LeftModule">
+            <ul class="list">
+                <li class="lists"><a href="../Home/Index">返回首页</a></li>
+                <li id="title">&nbsp;数 据</li>
+                <li class="lists"><a>个人主页</a></li>
+                <li class="lists"><a>信息认证</a></li>
+                <li class="lists"><a>我的众筹</a></li>
+                <li class="lists"><a>评论管理</a></li>
+                <li id="title">&nbsp;其 他</li>
+                <li class="lists"><a>新闻资讯</a></li>
+                <li class="lists"><a>在线客服</a></li>
+                <li class="lists"><a>APP下载</a></li>
+            </ul>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+    </div>
+
+</body>
+</html>

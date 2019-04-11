@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "File";
+    Layout = "~/Views/Shared/Home/_LayoutHead.cshtml";
+}
+
+
+
+
+<!-- 右边栏 -->
+
+<input type="file" id="UpFile" /><br />
+<script src="~/Common/jquery-3.1.1.js"></script>
+<script src="~/Common/ajaxfileupload.js"></script>
+<script>
+    $(function () {
+        $("#UpFile").change(function () {
+
+            $.ajaxFileUpload({
+                url: "Project/FileUpload",
+                datatype: "json",
+                type: "post",
+                secureuri: false,
+                fileElementId: 'UpFile',//文件input标签id
+
+                success: function (data) {
+                    debugger
+                    $("preview").attr("src", "../Images/" + data.responseText);
+                },
+                error: function (data) {
+                    debugger
+                    $("preview").attr("src", "../Images/" + data.responseText);
+                }
+            });
+
+        });
+    });
+</script>
+
+
+
+
+
+

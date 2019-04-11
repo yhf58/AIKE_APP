@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>tt</title>
+    <script src="~/Common/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <script src="~/Common/ajaxfileupload.js"></script>
+    <div>
+        <input type="file" id="file" />
+    </div>
+    <script>
+    $(function () {
+        $("#file").change(function () {
+            alert()
+            $.ajaxFileUpload({
+                    url: '@Url.Action("FileUpload", "Project")',
+                    datatype: "json",
+                    type:"post",
+                    secureuri: false,
+                    fileElementId: 'file',//文件input标签id
+                    data: {},
+                success: function (data) {
+                    debugger
+                   
+                },
+                error: function (data) {
+                    debugger
+                   
+                }
+            });
+
+        });
+    });
+    </script>
+
+
+</body>
+</html>
