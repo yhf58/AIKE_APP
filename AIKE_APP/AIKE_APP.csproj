@@ -398,6 +398,7 @@
     <Content Include="Views\Shared\_LayoutNews.cshtml" />
     <Content Include="Views\Test\ttt.cshtml" />
     <Content Include="Views\Test\tttttttt.cshtml" />
+    <Content Include="Views\Test\aaaaaaa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AIKE_BLL\AIKE_BLL.csproj">
