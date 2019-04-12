@@ -22,9 +22,9 @@ namespace AIKE_APP.Controllers
             remote.Add("api_user", "cd9b9095");
             remote.Add("price", price);
             remote.Add("type", type.ToString());
-            remote.Add("redirect", "http://localhost:64354/Home/Index");
+            remote.Add("redirect", "http://b.58yhf.top");
             remote.Add("order_id", PayUtil.getOrderIdByUUId());
-            remote.Add("order_info", "sp001");
+            remote.Add("order_info", "yao111");
             remote.Add("signature", PayUtil.getSignature("cd9b9095", remote));
             return JsonConvert.SerializeObject(remote, Formatting.Indented);
         }

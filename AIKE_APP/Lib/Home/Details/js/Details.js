@@ -50,3 +50,11 @@ $(function () {
        
     });
 });
+
+$(function () {
+
+    $(".r_button").click(function () {
+        var money = $(this).text().substring(1);
+        $(".money").val(money);
+    });
+});

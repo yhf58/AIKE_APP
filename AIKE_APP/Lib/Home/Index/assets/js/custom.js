@@ -35,27 +35,27 @@
 	});
 
 
-	//Isotope activation js codes
-	var $gellary_img = $('.portfolio_items').isotope({
-	  itemSelector: '.portfolio_item',
-	  percentPosition: true,
-	  transitionDuration: '0.5s',
-	  masonry: {
-		// use outer width of grid-sizer for columnWidth
-		columnWidth: '.portfolio_item',
-		gutter: 15
-	  },
-	  getSortData: {
-		name: '.name',
-		symbol: '.symbol',
-		number: '.number parseInt',
-		category: '[data-category]',
-		weight: function( itemElem ) {
-		  var weight = $( itemElem ).find('.weight').text();
-		  return parseFloat( weight.replace( /[\(\)]/g, '') );
-		}
-	  }
-	});
+	////Isotope activation js codes
+	//var $gellary_img = $('.portfolio_items').isotope({
+	//  itemSelector: '.portfolio_item',
+	//  percentPosition: true,
+	//  transitionDuration: '0.5s',
+	//  masonry: {
+	//	// use outer width of grid-sizer for columnWidth
+	//	columnWidth: '.portfolio_item',
+	//	gutter: 15
+	//  },
+	//  getSortData: {
+	//	name: '.name',
+	//	symbol: '.symbol',
+	//	number: '.number parseInt',
+	//	category: '[data-category]',
+	//	weight: function( itemElem ) {
+	//	  var weight = $( itemElem ).find('.weight').text();
+	//	  return parseFloat( weight.replace( /[\(\)]/g, '') );
+	//	}
+	//  }
+	//});
 
 	// filter functions
 	var filterFns = {
@@ -93,7 +93,7 @@
 	
 	
 	//lightcase
-	$('a[data-rel^=lightcase]').lightcase();
+	//$('a[data-rel^=lightcase]').lightcase();
 
 
 	//for wow
