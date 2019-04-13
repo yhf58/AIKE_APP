@@ -1,36 +1,28 @@
-﻿.Right {
-    width: 72%;
-    height: 200%;
-    margin-left: 25%;
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#Right {
+    width: 70%;
+    height: auto;
+    margin: 0px auto;
     background-color: #ffffff;
+    border: 1px solid #efebeb;
 }
 
-    .Right span {
+    #Right .right_within {
         width: 100%;
-        height: 8%;
-        margin-left: 3%;
-        margin-bottom: 5%;
-        font-family: 微软雅黑;
-        color: black;
-        font-weight: 800;
-        display: block;
+        height: 100%;
+        margin-top: 150px;
     }
 
-.ReturnSheZhi {
-    width: 100%;
-    height: 30%;
-    
+.layui-form-label {
+    width: 100px;
 }
 
-    .ReturnSheZhi input {
-        margin-left: 3%;
-        
-    }
-
-#Tips {
-    margin-left: 1%;
-    color: orangered;
-    font-size: 2%;
+#layui_id {
+    padding-top: 40px;
 }
 
 .ReturnText {
@@ -40,46 +32,21 @@
     line-height: 2px;
 }
 
-.ReturnButtons {
-    width: 15%;
-    height: 10%;
-    /*margin-top: 10%;*/
-    margin-left: 20%;
-    margin-bottom: 3%;
-    background-color: lightgreen;
-    color: #ffffff;
-    text-align: center;
-    font-family: "楷体";
-    line-height: 250%;
-    float: left;
-    font-weight: 800;
-}
-
 #ProRetunTable {
     width: 90%;
     height: auto;
-   margin:0px auto;
+    margin: 0px auto;
+    margin-top: 100px;
 }
 
-  
-
-.RetunButtons,.BigButtonss {
-    width: 80%;
-    height: 30%;
-    margin-top: 8%;
-    margin-left: 15%;
-    margin-bottom:10%;
-   
+#BigButtonss {
+    width: 100%;
+    height: 60px;
+    margin-top: 130px;
+    margin-bottom: 100px;
 }
 
-    .RetunButtons button {
-        margin-left: 12%;
-    }
-.BigButtonss {
-    margin-bottom:30%;
-    margin-top:30%;
-}
-    .BigButtonss button {
-        margin-left: 20%;
-       
+    #BigButtonss button {
+        margin-right: 60px;
+        float: right;
     }

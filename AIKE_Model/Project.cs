@@ -40,7 +40,7 @@ namespace AIKE_Model
         /// <summary>
         /// 项目详情
         /// </summary>
-        public string ProjectDetails { get; set; }
+        public string ProjectDetail { get; set; }
         /// <summary>
         /// 项目状态
         /// </summary>

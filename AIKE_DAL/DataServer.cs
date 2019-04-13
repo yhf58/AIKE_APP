@@ -192,7 +192,7 @@ namespace AIKE_DAL
         public static bool addReturn(List<ProjectReturn> list, Project project)
         {
             //添加项目
-            string sql = "insert into tb_ProjectMsg(ProjectTypeID,ProjectName,RaiseMoney,RaiseDays,ProjectAddress,ProjectCover,ProjectIntroduction,ProjectDetails,State,ReleaseTime,Label)values('" + project.ProjectTypeID + "','" + project.ProjectName + "','" + project.RaiseMoney + "','" + project.RaiseDays + "','" + project.ProjectAddress + "','" + project.ProjectCover + "','" + project.ProjectIntroduction + "','" + project.ProjectDetails + "','" + project.State + "','" + project.ReleaseTime + "','" + project.Label + "')";
+            string sql = "insert into tb_ProjectMsg(ProjectTypeID,ProjectName,RaiseMoney,RaiseDays,ProjectAddress,ProjectCover,ProjectIntroduction,ProjectDetails,State,ReleaseTime,Label)values('" + project.ProjectTypeID + "','" + project.ProjectName + "','" + project.RaiseMoney + "','" + project.RaiseDays + "','" + project.ProjectAddress + "','" + project.ProjectCover + "','" + project.ProjectIntroduction + "','" + project.ProjectDetail + "','" + project.State + "','" + project.ReleaseTime + "','" + project.Label + "')";
 
             bool t = DBHelper.GetBool(sql);
 

@@ -19,9 +19,9 @@ namespace AIKE_APP.Controllers
             return View();
         }
         [PersonCheckFilterAttribute(IsCheck = true)]
-        public ActionResult ProjectDetails(string path)
+        public ActionResult ProjectDetail(string path)
         {
-            Session["LoginName"] = "Project/ProjectDetails";
+            Session["LoginName"] = "Project/ProjectDetail";
             ViewData["photo"] = "";
             return View();
         }
@@ -66,7 +66,7 @@ namespace AIKE_APP.Controllers
             file.SaveAs(Server.MapPath(path));      //保存文件
             string fname = file.FileName;
             Session["sphoto"] = fname;
-            return Redirect("../Project/ProjectDetails");
+            return Redirect("../Project/ProjectDetail");
         }
         public string getPhoto()
         {
@@ -98,7 +98,7 @@ namespace AIKE_APP.Controllers
             {
                 ProjectAddress = Add,
                 ProjectCover = "",
-                ProjectDetails = Details,
+                ProjectDetail = Details,
                 ProjectIntroduction = Introduction,
                 ProjectName = name,
                 ProjectTypeID = 1,

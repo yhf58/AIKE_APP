@@ -1,0 +1,113 @@
+﻿@{
+    Layout = "~/Views/Shared/Home/_LayoutHead.cshtml";
+}
+<link href="~/Common/Project/Project.css" rel="stylesheet" />
+<!--layui-->
+<link href="~/Common/layUI/css/layui.css" rel="stylesheet" />
+@*<link href="~/layUI/css/layui.css" rel="stylesheet" />*@
+<link href="~/Common/Project/bootstrap-switch.css" rel="stylesheet" />
+<link href="~/Common/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<!--容器-->
+<div id="container">
+    <div class="comment">
+
+        <!--项目名称-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入项目名称" autocomplete="off" class="layui-input" style="width:400px;">
+            </div>
+        </div>
+        <!--筹集金额-->
+        <div class="layui-inline">
+            <label class="layui-form-label">筹集金额</label>
+            <div class="layui-input-inline" style="width: 200px;margin-left:10px;">
+                <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--筹集天数-->
+        <div class="layui">
+            <label class="layui-form-label">筹集天数</label>
+            <div class="layui-input-inline" style="width: 200px;margin-left:10px;">
+                <input type="text" name="price_min" placeholder="天" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地理位置</label>
+            <div class="layui-input-block">
+                <select name="city" lay-verify="" class="layui-select">
+                    <option value="">--省--</option>
+                    <option value="010">北京</option>
+                    <option value="021">上海</option>
+                    <option value="0571">杭州</option>
+                </select>
+                <select name="city" lay-verify="" class="layui-select">
+                    <option value="">--市--</option>
+                    <option value="010">西城</option>
+                    <option value="021">西虹</option>
+                    <option value="0571">杭州</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">发起人信息</label>
+            <div class="layui-input-inline" style="width: 150px;margin-left:10px;">
+                <input type="text" name="price_min" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-input-inline" style="width: 200px;padding-left:20px;">
+                <input type="text" name="price_max" placeholder="请输入11位手机号" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目类型</label>
+            <div class="layui-input-block">
+                <select name="city" lay-verify="" class="layui-select">
+                    <option value="">选择类型</option>
+                    <option value="0">科技</option>
+                    <option value="1">食品</option>
+                    <option value="2">文学</option>
+                    <option value="3">娱乐</option>
+                    <option value="4">公益</option>
+                    <option value="5">设计</option>
+                </select>
+            </div>
+        </div>
+        <div class="bat">
+            <button type="button" class="layui-btn" id="test1">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+            <label class="txtlab">图片大小1~10M</label>
+        </div>
+        <div>
+            <img id="preview" class="img-rounded" style="height:200px;width:200px;border:1px dashed #808080;margin-left:100px;">
+
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">项目详情</label>
+            <div class="layui-input-block" style="width:60%;">
+                <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+            </div>
+            <div style="width:120px;height:30px;margin-left:120px;">
+                <span style="font-family:STSong;font-weight:900">文本纠察：</span>
+                <input type="checkbox" id="jianche" style="float:left" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">上一步</button>
+                <button type="reset" class="layui-btn layui-btn-primary">下一步</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Common/jquery-3.1.1.js"></script>
+<script src="~/Common/layUI/layui.js"></script>
+<script src="/static/build/layui.js"></script>
+<script src="~/Common/Project/bootstrap-switch.min.js"></script>
+<script src="~/Common/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('input[type=checkbox]').bootstrapSwitch({ size: "small" });
+    })
+</script>
+<script src="~/Common/Project/Project.js"></script>

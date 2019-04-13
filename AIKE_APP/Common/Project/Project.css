@@ -1,259 +1,40 @@
-﻿body {
-    background-color: #f4f4f4;
-    
-}
-
-.titleheda {
-    width: 92%;
-    height: auto;
-    margin-left: 3%;
-    margin-top: 3%;
-}
-/*          项目详情       */
-.Frame {
-    width: 70%;
-    height: 1050px;
-    border: 1px solid #000000;
-    margin: 0px auto;
-   padding:0px;
-}
-
-/*   左边栏   */
-.LeftModule {
-    width: 20%;
-    height: 100%;
-    margin-left: 3%;
-    background-color: #ffffff;
-    float: left;
-}
-
-.list {
-    margin-top: 5%;
-    width: 100%;
-    height: 70%;
-    list-style: none;
+﻿* {
     margin: 0px;
     padding: 0px;
 }
 
-.lists {
-    width: 100%;
-    height: 8%;
-    list-style: none;
-    color: black;
-    text-align: center;
-    line-height: 350%;
-    font-family: 微软雅黑;
-    font-weight: 800;
-}
-
-    .lists a {
-        color: black;
-        list-style: none;
-    }
-
-    .lists:hover {
-        background-color: red;
-    }
-
-#title {
-    color: #120d0d;
-    text-align: left;
-    line-height: 300%;
-    font-family: 微软雅黑;
-    font-weight: 800;
-    border-top: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
-}
-
-/*   右边栏   */
-.RightModule {
+#container {
     width: 70%;
-    height: 100%;
-    margin-left: 25%;
-    background-color: #ffffff;
-    margin-top:-2%;
-}
-/*  项目名称  */
-#EntryName {
-    width: 95%;
-    height: 6%;
-    display: block;
+    height: auto;
+    border: 1px solid #eeeded;
     margin: 0px auto;
 }
 
-    #EntryName input {
-        margin-top: 2%;
-        height: 80%;
-        width: 100%;
+    #container .comment {
+        width: 90%;
+        height: 1400px;
+        margin-left: 130px;
+        margin-top: 160px;
     }
 
-/*   项目筹集   */
-.JianJie {
-    width: 100%;
-    height: 30%;
-    padding-left: 3%;
-    font-weight: 700;
-    font-family: 宋体;
-   
-}
-
-.Raise {
-    width: 100%;
-    height: 15%;
-    margin-top: 5%;
-    margin-bottom: 9%;
-}
-
-    .Raise div {
-        width: 45%;
-        height: auto;
-        float: left;
-        margin-right: 5%;
-        margin-bottom: 5%;
+    #container .layui-form-label {
+        width: 100px;
     }
 
-
-/*      项目封面    */
-#Cover {
-    width: 50px;
-    height: 50px;
-    border-width: 1px;
-    border-style: dashed;
-    border-color: #808080;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-}
-/*      地区下拉框       */
-.selects {
-    width: 30%;
-    height: 30%;
-    margin-left: 3%;
-    margin-top:3%;
-    text-align: center;
-    text-align-last: center;
-}
-/*  项目类型    */
-.type {
-    width: 100%;
-    height: 30%;
-    display: block;
-    margin-bottom: 3%;
-}
-
-    .type span {
-        width: 100%;
-        height: 10%;
-        margin-left: 2%;
-        color: #808080;
-    }
-    .type button{
-        margin-right:3%;
-        margin-left:3%;
-    }
-/*  项目简介    */
-.Introduce {
-    width: 90%;
-    height: 10%;
-    margin-top: 3%;
-    margin-bottom: 5%;
-}
-
-/*  封面  */
-.fenmian {
-    width: 100%;
-    height: 20%;
-}
-
-#editor {
-    width: 100%;
-    height: 20%;
-}
-.Right {
-    width: 72%;
-    height: 100%;
-    margin-left: 25%;
-    background-color: #ffffff;
-}
-
-    .Right span {
-        width: 100%;
-        height: 8%;
-        margin-left: 3%;
-        margin-bottom: 3%;
-        font-family: 微软雅黑;
-        color: black;
-        font-weight: 800;
-        display: block;
+    #container div {
+        padding-bottom: 20px;
     }
 
-.ReturnSheZhi {
-    width: 100%;
-    height: 50%;
-}
-
-    .ReturnSheZhi input {
-        margin-left: 3%;
+    #container .layui-select {
+        width: 150px;
+        height: 38px;
+        border: 1px solid #eeeded;
     }
 
-#Tips {
-    margin-left: 1%;
-    color: orangered;
-    font-size: 2%;
-}
-
-.ReturnText {
-    width: 70%;
-    height: 200%;
-    box-sizing: border-box;
-    line-height: 2px;
-}
-
-.ReturnButtons {
-    width: 15%;
-    height: 10%;
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-bottom: 3%;
-    background-color: lightgreen;
-    color: #ffffff;
-    text-align: center;
-    font-family: "楷体";
-    line-height: 250%;
-    float: left;
-    font-weight: 800;
-}
-
-.DataTable {
-    width: 90%;
-    height: auto;
-    border: 1px solid black;
-    margin-left: 5%;
-}
-
-    .DataTable td {
-        width: 10%;
-        border: 1px solid black;
-        text-align: center;
+    #container .bat {
+        margin-left: 100px;
     }
 
-.Buttons {
-    width: 80%;
-    height: 30%;
-    margin-top: 13%;
-    margin-left: 15%;
-}
-    .Buttons button {
-        margin-left: 12%;
-    }
-
-.BigButtons {
-    margin-top: 10%;
-    margin-left: 32%;
-    margin-bottom:20%;
-}
-
-    .BigButtons button {
-        margin-right: 20%;
+    #container .layui-textarea {
+        height: 300px;
     }
