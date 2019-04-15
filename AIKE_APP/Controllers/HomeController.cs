@@ -478,6 +478,13 @@ namespace AIKE_APP.Controllers
                 return "0";
             }
         }
-
+        /// <summary>
+        /// 支付成功页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult payment_suc()
+        {
+            return View();
+        }
     }
 }

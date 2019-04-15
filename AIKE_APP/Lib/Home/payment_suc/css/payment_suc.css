@@ -1,0 +1,52 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+    font-family:"宋体";
+}
+#Comment {
+    width: 80%;
+    height: 1000px;
+    border: 1px solid #ededed;
+    margin: auto;
+}
+#Comment .Payment{
+    width:60%;
+    height:25%;
+    border:1px solid #ededed;
+    margin:auto;
+    margin-top:250px;
+}
+    #Comment .Payment p {
+        width: 100%;
+        height: 60px;
+       
+        text-align: center;
+        line-height: 60px;
+    }
+    #Comment .Payment .sce{          
+        font-size:20px;
+        font-weight:600;
+    }
+    #Comment .Payment .txtsce{
+        font-size:15px;
+        font-weight:300;
+    }
+    #Comment .Payment h5 span{
+        color:#ff0000;
+    }
+    #Comment .Payment .btnsce {
+        width: 100%;
+        height: 60px;
+       
+        line-height:60px;
+        text-align:center;
+        margin-bottom:10px;
+    }
+    /*倒计时样式*/
+    #Comment .bordes{
+        margin-top:60px;  
+        float:right;
+    }
+#time{
+    color:#ff0000;
+}
