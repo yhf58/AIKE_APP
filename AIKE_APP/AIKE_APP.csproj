@@ -418,6 +418,7 @@
     <Content Include="Lib\Home\Login\js\particles2.min.js" />
     <Content Include="Lib\Home\payment_suc\css\payment_suc.css" />
     <Content Include="Lib\Home\payment_suc\img\wx.png" />
+    <Content Include="Lib\Home\payment_suc\img\wxts.png" />
     <Content Include="Lib\Home\payment_suc\img\zfb.png" />
     <Content Include="Lib\Home\Person\Person.css" />
     <Content Include="Lib\Home\register\css\bootstrap.min.css" />

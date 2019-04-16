@@ -56,8 +56,11 @@
     margin: auto;
     margin-top: 250px;
 }
+#Choice .left{
+    margin-left:15px;
+}
 #Choice h5{
-   border:1px solid red;
+   /*border:1px solid red;*/
    font-size:20px;
 }
 #Choice .sp_color{
@@ -69,4 +72,19 @@
     background-repeat:no-repeat;
     width:140px;
     height:40px;
+}
+#QR_code {
+
+    float:left;
+}
+
+    #QR_code img {
+        width: 240px;
+        height: 240px;
+    }
+
+#Choice .Tips {
+   
+    float:right;
+    margin-right:330px;
 }
