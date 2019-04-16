@@ -17,9 +17,7 @@
     margin-top:250px;
 }
     #Comment .Payment p {
-        width: 100%;
-        height: 60px;
-       
+        width: 100%;       
         text-align: center;
         line-height: 60px;
     }
@@ -49,4 +47,44 @@
     }
 #time{
     color:#ff0000;
+}
+/*选择支付页面样式*/
+#Choice {
+    width: 60%;
+    height: 45%;
+    border: 1px solid #ededed;
+    margin: auto;
+    margin-top: 250px;
+}
+#Choice .left{
+    margin-left:15px;
+}
+#Choice h5{
+   /*border:1px solid red;*/
+   font-size:20px;
+}
+#Choice .sp_color{
+    color:#ff0000;
+}
+#Choice .btn{
+    background-position:5px;
+    background-size:25px;
+    background-repeat:no-repeat;
+    width:140px;
+    height:40px;
+}
+#QR_code {
+
+    float:left;
+}
+
+    #QR_code img {
+        width: 240px;
+        height: 240px;
+    }
+
+#Choice .Tips {
+   
+    float:right;
+    margin-right:330px;
 }

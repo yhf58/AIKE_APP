@@ -53,7 +53,7 @@
             <div id="details">
                 <div class="left">
 
-                    @*<img src="~/Lib/Home/Details/img/@p[0].ProjectCover" />*@
+     
                     <img src="~/Images/@p[0].ProjectCover" />
                 </div>
                 <div class="right">
@@ -76,7 +76,7 @@
                             <p>此项目须在 <span>@p[0].RaiseDays</span>天 后，获得¥<span>@p[0].RaiseMoney.ToString().Substring(0, 9)</span>的支持才可成功</p>
                         </div>
                         <div id="bat">
-                            @*<button type="button" class="btn btn-warning">我要支持</button>*@
+
                             <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                                 我要支持
                             </button>
@@ -89,7 +89,7 @@
                                             &times;
                                         </button>
                                         <h4 class="modal-title" id="myModalLabel">
-                                            支付中心
+                                            回报内容
                                         </h4>
                                     </div>
                                     <!--添加文本内容扫码支付-->
@@ -101,7 +101,7 @@
                                                         <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
                                                     </div>
                                                     <div class="chocetxt">
-                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p class="qian">￥<span class="sp_color">75</span>元</p>
                                                         <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
                                                         <p>邮费：免邮</p>
                                                         <p>
@@ -117,7 +117,7 @@
                                                         <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
                                                     </div>
                                                     <div class="chocetxt">
-                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p class="qian">￥<span class="sp_color">75</span>元</p>
                                                         <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
                                                         <p>邮费：免邮</p>
                                                         <p>
@@ -133,7 +133,7 @@
                                                         <img src="../Lib/Home/Details/img/和田玉.jpg" style="" />
                                                     </div>
                                                     <div class="chocetxt">
-                                                        <p class="qian">￥<span>75</span>元</p>
+                                                        <p class="qian">￥<span class="sp_color">75</span>元</p>
                                                         <p>感谢您的支持，您将获得加长型冰丝防磨内容一天（非一体针织型）</p>
                                                         <p>邮费：免邮</p>
                                                         <p>
@@ -145,29 +145,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="Return">
-                                                <div class="r2">
-                                                    <p class="balance">我的余额（元)</p>
-                                                    <p class="money">0.00</p>
-                                                </div>
-                                                <div id="payment">
-                                                    <div class="Recharge">
-                                                        <p class="txtcz">充值</p>
-                                                        <p class="txtTips">充值页面将跳转到支付页面完成</p>
-                                                        <div class="layui-form-item">
-                                                            <label class="layui-form-label">金额</label>
-                                                            <div class="layui-input-block">
-                                                                <input type="text" id="inputprice" name="title" required lay-verify="required" placeholder="请输入金额" autocomplete="off" class="money layui-input">
-                                                            </div>
-                                                        </div>
-                                                        <div class="btnzf">
-                                                            <button class="payType layui-btn layui-btn-radius">微信支付</button>
-                                                            <button class="payType layui-btn layui-btn-radius layui-btn-normal">支付宝支付</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
+                                       
                                     </div>
                                     <!--底部说明-->
                                     <div class="modal-footer">
