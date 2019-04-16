@@ -29,36 +29,23 @@ namespace AIKE_APP.Controllers
             return View();
         }
 
-        public JObject Pay(Paypayzhu payz)
+        public JObject Pay(string type,string price,string redirect,string order_id,string order_info)
         {
-            //TreeMap<String, String> paramMap = new TreeMap<String, String>();
-            //paramMap.put("price", paypayzhuDto.getPrice());
-            //paramMap.put("type", paypayzhuDto.getType());
-            //paramMap.put("redirect", paypayzhuDto.getRedirect());
-            //paramMap.put("order_id", paypayzhuDto.getOrder_id());
-            //paramMap.put("order_info", paypayzhuDto.getOrder_info());
-            //paramMap.put("api_user", PayUtil.API_USER);
-            //String signature = PayUtil.getSignature(PayUtil.API_USER, paramMap);
-            //System.out.println(signature);
-            //paramMap.put("signature", signature);
-            //JSONObject result = PayUtil.post(API_URL + "pay_json", paramMap);
-            //return result;
-
 
             Dictionary<string, string> remote = new Dictionary<string, string>();
-            remote.Add("api_user",PayUtil.API_USER);
-            remote.Add("price",payz.Price);
-            remote.Add("type", payz.Type.ToString());
-            remote.Add("redirect",payz.Redirect);
-          //  remote.Add("order_id", PayUtil.getOrderIdByUUId());
-            remote.Add("order_id",payz.Order_id);
-            remote.Add("order_info", payz.Order_info);
+            remote.Add("api_user", PayUtil.API_USER);
+            remote.Add("price",price);
+            remote.Add("type",type);
+            remote.Add("redirect",redirect);
+            //  remote.Add("order_id", PayUtil.getOrderIdByUUId());
+            remote.Add("order_id", order_id);
+            remote.Add("order_info",order_info);
             remote.Add("signature", PayUtil.getSignature(PayUtil.API_USER, remote));
             JObject jo = (JObject)JsonConvert.DeserializeObject(PayUtil.GetResponseString(PayUtil.CreatePostHttpResponse("https://www.paypayzhu.com/api/pay_json", remote)));
-           
+
             return jo;
         }
-        
+
         public string notifyPay(HttpRequest request, HttpResponse response, Paypayzhu paypayzhu)
         {
             // 保证密钥一致性
@@ -74,19 +61,19 @@ namespace AIKE_APP.Controllers
             }
         }
 
-      public JObject order(string order_id) 
-      {
-        Dictionary<string, string> paramMap = new Dictionary<string, string>();	
-		paramMap.Add("api_user", PayUtil.API_USER);	
-		paramMap.Add("order_id", order_id);	
-		string signature = PayUtil.getSignature(PayUtil.API_USER, paramMap);
-       // System.out.println(signature);
-        paramMap.Add("signature", signature);
-        string idd = PayUtil.GetResponseString(PayUtil.CreatePostHttpResponse("https://www.paypayzhu.com/api/order_query", paramMap));
-        JObject jo = (JObject)JsonConvert.DeserializeObject(PayUtil.GetResponseString(PayUtil.CreatePostHttpResponse("https://www.paypayzhu.com/api/order_query", paramMap)));
+        public JObject order(string order_id)
+        {
+            Dictionary<string, string> paramMap = new Dictionary<string, string>();
+            paramMap.Add("api_user", PayUtil.API_USER);
+            paramMap.Add("order_id", order_id);
+            string signature = PayUtil.getSignature(PayUtil.API_USER, paramMap);
+            // System.out.println(signature);
+            paramMap.Add("signature", signature);
+            string idd = PayUtil.GetResponseString(PayUtil.CreatePostHttpResponse("https://www.paypayzhu.com/api/order_query", paramMap));
+            JObject jo = (JObject)JsonConvert.DeserializeObject(PayUtil.GetResponseString(PayUtil.CreatePostHttpResponse("https://www.paypayzhu.com/api/order_query", paramMap)));
             //JSONObject result = PayUtil.post(API_URL + "order_query", paramMap);
-       return jo;
-	}
+            return jo;
+        }
 
-}
+    }
 }

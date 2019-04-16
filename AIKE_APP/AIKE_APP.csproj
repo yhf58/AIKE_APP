@@ -282,6 +282,11 @@
     <Content Include="Common\layUI\theme\layui.css" />
     <Content Include="Common\layUI\theme\layui.mobile.css" />
     <Content Include="Common\News\news.css" />
+    <Content Include="Common\Pay\jquery-1.11.0.min.js" />
+    <Content Include="Common\Pay\jquery.qrcode.min.js" />
+    <Content Include="Common\Pay\toast.script.js" />
+    <Content Include="Common\Pay\toast.style.css" />
+    <Content Include="Common\Pay\toast.style.min.css" />
     <Content Include="Common\Project\bootstrap-switch.css" />
     <Content Include="Common\Project\bootstrap-switch.min.js" />
     <Content Include="Common\Project\bootstrap.css" />

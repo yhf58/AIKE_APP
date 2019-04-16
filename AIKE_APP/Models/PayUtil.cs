@@ -36,9 +36,10 @@ namespace AIKE_APP.Models
         public static string getSignature(string api_user, Dictionary<string, string> treeMap)
         {
             string signStr = API_KEY;
-            foreach(String value in treeMap.Values) {
+            foreach (String value in treeMap.Values)
+            {
 
-                 signStr = signStr + value;
+                signStr = signStr + value;
 
             }
             getMd5Hash(signStr);
@@ -48,39 +49,7 @@ namespace AIKE_APP.Models
         }
 
 
-       //public static string getSignature(string api_user, Dictionary<string, string> remoteMap)
-       // {
 
-       //     Dictionary<string, string> treeMap = new Dictionary<string, string>();
-       //     treeMap.Add("api_user", api_user);
-       //     if (null != remoteMap["price"])
-       //     {
-       //         treeMap.Add("price", remoteMap["price"]);
-       //     }
-       //     if (null != remoteMap["type"])
-       //     {
-       //         treeMap.Add("type", remoteMap["type"]);
-       //     }
-       //     if (null != remoteMap["redirect"])
-       //     {
-       //         treeMap.Add("redirect", remoteMap["redirect"]);
-       //     }
-       //     if (null != remoteMap["order_id"])
-       //     {
-       //         treeMap.Add("order_id", remoteMap["order_id"]);
-       //     }
-       //     if (null != remoteMap["order_info"])
-       //     {
-       //         treeMap.Add("order_info", remoteMap["order_info"]);
-       //     }
-       //     string signStr = API_KEY;
-       //     foreach (string value in treeMap.Values)
-       //     {
-       //         string u = value;
-       //         signStr = signStr + value;
-       //     }
-       //     return getMd5Hash(signStr);
-       // }
 
         public static string getOrderIdByUUId()
         {
@@ -150,7 +119,7 @@ namespace AIKE_APP.Models
             return charSequence == null || charSequence.Length == 0;
         }
 
-       
+
         public static string getMd5Hash(string input)
         {
             MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
@@ -174,85 +143,7 @@ namespace AIKE_APP.Models
             // Return the hexadecimal string.
             return sBuilder.ToString();
         }
-        //   /// <summary>
-        //   /// /////////////////////////////////   post请求
-        //   /// </summary>
-        //   /// <param name="url"></param>
-        //   /// <param name="paramMap"></param>
-        //   /// <returns></returns>
-        //     public static string post(string url, Dictionary<string, string> paramMap)
-        //     {
 
-        //         HttpClientCertificate httpclient = null;
-        //         List < NameValuePair > params = new ArrayList<NameValuePair>();
-        //         for (String key : paramMap.keySet())
-        //         {
-        //params.add(new BasicNameValuePair(key, paramMap.get(key)));
-        //         }
-
-        //         try
-        //         {
-        //             httpclient = HttpClientBuilder.create().build();
-        //             HttpPost httpPost = new HttpPost(url);
-        //             httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
-        //             HttpResponse response = httpclient.execute(httpPost);
-        //             result = JSONObject.fromObject(EntityUtils.toString(response.getEntity(), "UTF-8"));
-        //             httpPost.releaseConnection();
-        //             httpclient.close();
-        //         }
-        //         catch (Exception e)
-        //         {
-        //             e.printStackTrace();
-        //         }
-        //         finally
-        //         {
-        //             if (httpclient != null)
-        //             {
-        //                 try
-        //                 {
-        //                     httpclient.close();
-        //                 }
-        //                 catch (IOException e)
-        //                 {
-        //                     e.printStackTrace();
-        //                 }
-        //             }
-
-        //         }
-
-        //         return result;
-        //     }
-        //     ///post请求
-        //     ///
-        //public static string post(string url, IDictionary<string, string> parameters)
-        //{
-        //    StringBuilder buffer = new StringBuilder("0");
-
-        //     HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;//创建请求对象
-        //    request.Method = "POST";//请求方式
-        //    request.ContentType = "application/x-www-form-urlencoded";//链接类型
-        //                                                              //构造查询字符串
-        //    if (!(parameters == null || parameters.Count == 0))
-        //    {
-
-        //        bool first = true;
-        //        foreach (string key in parameters.Keys)
-        //        {
-
-        //            if (!first)
-        //            {
-        //                buffer.AppendFormat("&{0}={1}", key, parameters[key]);
-        //            }
-        //            else
-        //            {
-        //                buffer.AppendFormat("{0}={1}", key, parameters[key]);
-        //                first = false;
-        //            }
-        //        }
-
-        //    }
-        //    return buffer.ToString();
-        //}
         public static HttpWebResponse CreatePostHttpResponse(string url, IDictionary<string, string> parameters)
         {
             HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;//创建请求对象
