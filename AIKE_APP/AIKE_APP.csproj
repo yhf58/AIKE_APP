@@ -417,6 +417,8 @@
     <Content Include="Lib\Home\Login\js\app.js" />
     <Content Include="Lib\Home\Login\js\particles2.min.js" />
     <Content Include="Lib\Home\payment_suc\css\payment_suc.css" />
+    <Content Include="Lib\Home\payment_suc\img\wx.png" />
+    <Content Include="Lib\Home\payment_suc\img\zfb.png" />
     <Content Include="Lib\Home\Person\Person.css" />
     <Content Include="Lib\Home\register\css\bootstrap.min.css" />
     <Content Include="Lib\Home\register\css\iconfont.css" />
@@ -448,7 +450,6 @@
     <Folder Include="Images\MsgImg\" />
     <Folder Include="Lib\Error\FOF\images\" />
     <Folder Include="Lib\Error\FOF\js\" />
-    <Folder Include="Lib\Home\payment_suc\img\" />
     <Folder Include="Lib\Home\payment_suc\js\" />
   </ItemGroup>
   <ItemGroup>
