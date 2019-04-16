@@ -1,17 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+    ViewBag.Title = "Newslist";
+    Layout = "~/Views/Shared/Home/_LayoutHead.cshtml";
 }
 
-<link href="~/Common/News/news.css" rel="stylesheet" />
-
-<div id="content">
+<div class="container" style="margin-top:90px;height:1200px;color:red;border:1px solid red;">
     <h2 id="newTitle"></h2><br /><br />
 
-    <ul id="newlist" class="list-group">
-
-    </ul>
+    <ul id="newlist" class="list-group"></ul>
 </div>
 
 <script>
@@ -64,11 +60,11 @@
                     success: function (result) {
                         $("h2").text(t);
                         for (var i in result.showapi_res_body.pagebean.contentlist) {
-                         
+
                             var news = $("<li><p class='title'>" + result.showapi_res_body.pagebean.contentlist[i].title + "</p><p class='date'>" + result.showapi_res_body.pagebean.contentlist[i].pubDate + "</p><a href=" + result.showapi_res_body.pagebean.contentlist[i].link + "><img src=" + result.showapi_res_body.pagebean.contentlist[i].imageurls[0].url + " /></a></li>");
 
                             $("ul.list-group").append(news);
-                           
+
                         }
                     }
                 });
@@ -101,4 +97,5 @@
         return datetime;
     }
 </script>
+
 

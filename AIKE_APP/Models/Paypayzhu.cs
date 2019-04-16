@@ -31,11 +31,17 @@ namespace AIKE_APP.Models
 
         private string signature;
 
+        private string type;
+
+        private string redirect;
+
         public string Ppz_order_id { get => ppz_order_id; set => ppz_order_id = value; }
         public string Order_id { get => order_id; set => order_id = value; }
         public string Price { get => price; set => price = value; }
         public string Real_price { get => real_price; set => real_price = value; }
         public string Order_info { get => order_info; set => order_info = value; }
         public string Signature { get => signature; set => signature = value; }
+        public string Type { get => type; set => type = value; }
+        public string Redirect { get => redirect; set => redirect = value; }
     }
 }

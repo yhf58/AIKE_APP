@@ -135,6 +135,7 @@
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Filter\AllowOriginAttribute.cs" />
     <Compile Include="Filter\MyCheckFilterAttribute.cs" />
     <Compile Include="Filter\PersonCheckFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -514,6 +515,7 @@
     <Content Include="Views\Test\_PartialPage1.cshtml" />
     <Content Include="Views\Project\ProjectDetail.cshtml" />
     <Content Include="Views\Home\payment_suc.cshtml" />
+    <Content Include="Views\News\Newslist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AIKE_BLL\AIKE_BLL.csproj">

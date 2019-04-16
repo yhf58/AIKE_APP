@@ -13,5 +13,9 @@ namespace AIKE_APP.Controllers
         {
             return View();
         }
+        public ActionResult Newslist()
+        {
+            return View();
+        }
     }
 }

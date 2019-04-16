@@ -34,7 +34,7 @@
         <button type="button" id="demoBtn1">确认购买</button>
     </form>
 
-    <form id='formpay' name='formpay' method='post' action='https://www.paypayzhu.com/api/pay'>
+   
         <input name='api_user' id='api_user' type='text' value='' />
         <input name='price' id='price' type='text' value='' />
         <input name='type' id='type' type='text' value='' />
@@ -42,8 +42,8 @@
         <input name='order_id' id='order_id' type='text' value='' />
         <input name='order_info' id='order_info' type='text' value='' />
         <input name='signature' id='signature' type='text' value='' />
-        <input type='submit' id='submitdemo1'>
-    </form>
+        <input type='button' id='submitdemo1'>
+
 
     <!-- Jquery files -->
 
@@ -54,59 +54,100 @@
                 return ($("#demo1-alipay").is(':checked') ? "2" : "1");
             }
 
-            $("#demoBtn1").click(function(){
-                $.post(
-                    "../Pay/Pay",
-                    {
-                        price : $("#inputprice").val(),
-                        type : getistype(),
-
-                    },
-                    function(data){
-                       console.log('a',data)
-            $("#api_user").val(data.data.api_user);
-            $("#price").val(data.data.price);
-            $('#type').val(data.data.type);
-            $('#redirect').val(data.data.redirect);
-            $('#order_id').val(data.data.order_id);
-            $('#order_info').val(data.data.order_info);
-            $('#signature').val(data.data.signature);
-            $('#submitdemo1').click();
-                    }, "json"
-                );
-            });
-            //$('#demoBtn1').click(function () {
-            //    $.ajax(
+            //$("#demoBtn1").click(function(){
+            //    $.post(
+            //        "../Pay/Pay",
             //        {
-            //            type: 'post',
-            //            url: '../Pay/Pay',
-            //            data: {
-            //                "price": $("#inputprice").val(),
-            //                "type": getistype()
-            //            },
-            //            dataType: 'json',
-            //            success: function (data) {
-            //                $("#api_user").val(data.api_user);
-            //                $("#price").val(data.price);
-            //                $('#type').val(data.type);
-            //                $('#redirect').val(data.redirect);
-            //                $('#order_id').val(data.order_id);
-            //                $('#order_info').val(data.order_info);
-            //                $('#signature').val(data.signature);
+            //            price : $("#inputprice").val(),
+            //            type : getistype(),
+
+            //        },
+            //        function(data){
+            //           console.log('a',data)
+            //$("#api_user").val(data.data.api_user);
+            //$("#price").val(data.data.price);
+            //$('#type').val(data.data.type);
+            //$('#redirect').val(data.data.redirect);
+            //$('#order_id').val(data.data.order_id);
+            //$('#order_info').val(data.data.order_info);
+            //$('#signature').val(data.data.signature);
+            //$('#submitdemo1').click();
+            //        }, "json"
+            //    );
+            //});
+            $('#demoBtn1').click(function () {
+                $.ajax(
+                    {
+                        type: 'post',
+                        url: '../Pay/Pay',
+                        data: {
+                            "price": $("#inputprice").val(),
+                            "type": getistype()
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            $("#api_user").val(data.api_user);
+                            $("#price").val(data.price);
+                            $('#type').val(data.type);
+                            $('#redirect').val(data.redirect);
+                            $('#order_id').val(data.order_id);
+                            $('#order_info').val(data.order_info);
+                            $('#signature').val(data.signature);
 
 
-            //                var e = document.createEvent("MouseEvents");
+                            //var e = document.createEvent("MouseEvents");
 
-            //                e.initEvent("click", true, true);
+                            //e.initEvent("click", true, true);
 
-            //                document.getElementById("submitdemo1").dispatchEvent(e);
-            //            },
-            //            error: function () {
-            //                alert("失败！");
-            //            }
-            //        }
-            //    )
+                            //document.getElementById("submitdemo1").dispatchEvent(e);
+                        },
+                        error: function () {
+                            alert("失败！");
+                        }
+                    }
+                )
             });
+
+            //////////////////////////
+
+            $("#submitdemo1").click(function () {
+                //alert($("#api_user").val())
+                //alert($("#price").val())
+                //alert($("#price").val())
+                //alert($("#price").val())
+                //alert($("#price").val())
+                //alert($("#price").val())
+                $.ajax({
+                    url: "https://www.paypayzhu.com/api/pay_json",
+                    type: "POST",//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    crossDomain: true,  //【这个很重要，一定要加】
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    data: {
+                        "api_user": $("#api_user").val(),
+                        "price": $("#price").val(),
+                        "type": $('#type').val(),
+                        "redirect": $('#redirect').val(),
+                        "order_id": $('#order_id').val(),
+                        "order_info": $('#order_info').val(),
+                        "signature": $('#signature').val()
+                    },
+                    success: function (datra) {
+                        debugger
+                    },
+                    error: function (data) {
+                        debugger
+                    }
+
+
+                });
+            });
+
+
+            //////////////////////////
+
         });
     </script>
     <script>
