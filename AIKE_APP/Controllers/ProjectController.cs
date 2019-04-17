@@ -28,7 +28,8 @@ namespace AIKE_APP.Controllers
         [PersonCheckFilterAttribute(IsCheck = true)]
         public ActionResult Returns()
         {
-
+            int money =Convert.ToInt32( Request.QueryString["money"]);
+            ViewData["Paymoney"] = money;
             return View();
         }
         /// <summary>

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
@@ -29,39 +32,24 @@ namespace AIKE_APP.Models
 
             return paramMap;
         }
-        public static string getSignature(string api_user, Dictionary<string, string> remoteMap)
-        {
 
-            Dictionary<string, string> treeMap = new Dictionary<string, string>();
-            treeMap.Add("api_user", api_user);
-            if (null != remoteMap["price"])
-            {
-                treeMap.Add("price", remoteMap["price"]);
-            }
-            if (null != remoteMap["type"])
-            {
-                treeMap.Add("type", remoteMap["type"]);
-            }
-            if (null != remoteMap["redirect"])
-            {
-                treeMap.Add("redirect", remoteMap["redirect"]);
-            }
-            if (null != remoteMap["order_id"])
-            {
-                treeMap.Add("order_id", remoteMap["order_id"]);
-            }
-            if (null != remoteMap["order_info"])
-            {
-                treeMap.Add("order_info", remoteMap["order_info"]);
-            }
+        public static string getSignature(string api_user, Dictionary<string, string> treeMap)
+        {
             string signStr = API_KEY;
-            foreach (string value in treeMap.Values)
+            foreach (String value in treeMap.Values)
             {
-                string u = value;
+
                 signStr = signStr + value;
+
             }
+            getMd5Hash(signStr);
+
             return getMd5Hash(signStr);
+
         }
+
+
+
 
         public static string getOrderIdByUUId()
         {
@@ -131,114 +119,7 @@ namespace AIKE_APP.Models
             return charSequence == null || charSequence.Length == 0;
         }
 
-        //public static string makeMd5Sum(string str)
-        //{
-        //    if (str == null)
-        //    {
-        //        return null;
-        //    }
 
-
-        //    byte[] s;
-        //    try
-        //    {
-
-        //        //string pwd = "";
-        //        MD5 md5 = MD5.Create(); //实例化一个md5对像
-        //        // 加密后是一个字节类型的数组，这里要注意编码UTF8/Unicode等的选择　
-        //        s = md5.ComputeHash(Encoding.UTF8.GetBytes(str));
-        //    }
-        //    catch
-        //    {
-        //        return null;
-        //    }
-
-        //    return Convert.ToBase64String(s);
-        //}
-
-        //public static string GetMD5(string myString)
-        //{
-        //    MD5 md5 = new MD5CryptoServiceProvider();
-        //    byte[] fromData = System.Text.Encoding.Unicode.GetBytes(myString);
-        //    byte[] targetData = md5.ComputeHash(fromData);
-        //    string byte2String = null;
-
-        //    for (int i = 0; i < targetData.Length; i++)
-        //    {
-        //        byte2String += targetData[i].ToString("x");
-        //    }
-
-        //    return byte2String;
-        //}
-        //public static string MD5Encrypt(string strText)
-        //{
-        //    MD5 md5 = new MD5CryptoServiceProvider();
-        //    byte[] result = md5.ComputeHash(System.Text.Encoding.Default.GetBytes(strText));
-        //    return System.Text.Encoding.UTF8.GetString(result);
-        //}
-
-        //static string UserMd5(string str)
-        //{
-        //    string cl = str;
-        //    string pwd = "";
-        //    MD5 md5 = MD5.Create();//实例化一个md5对像
-        //    // 加密后是一个字节类型的数组，这里要注意编码UTF8/Unicode等的选择　
-        //    byte[] s = md5.ComputeHash(Encoding.UTF8.GetBytes(cl));
-        //    // 通过使用循环，将字节类型的数组转换为字符串，此字符串是常规字符格式化所得
-        //    for (int i = 0; i < s.Length; i++)
-        //    {
-        //        // 将得到的字符串使用十六进制类型格式。格式后的字符是小写的字母，如果使用大写（X）则格式后的字符是大写字符
-
-        //        pwd = pwd + s[i].ToString("X");
-
-        //    }
-        //    return pwd;
-        //}
-
-        //public static string MD5Encrypt(string input, Encoding encode)
-        //{
-        //    if (string.IsNullOrEmpty(input))
-        //    {
-        //        return null;
-        //    }
-        //    MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
-        //    byte[] data = md5Hasher.ComputeHash(encode.GetBytes(input));
-        //    StringBuilder sBuilder = new StringBuilder();
-        //    for (int i = 0; i < data.Length; i++)
-        //    {
-        //        sBuilder.Append(data[i].ToString("x2"));
-        //    }
-        //    return sBuilder.ToString();
-        //}
-
-        //public static string MD5(string Password, int Length)
-        //{
-
-        //    if (Length != 16 && Length != 32) throw new System.ArgumentException("Length参数无效,只能为16位或32位");
-        //    System.Security.Cryptography.MD5CryptoServiceProvider MD5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
-        //    byte[] b = MD5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(Password));
-        //    System.Text.StringBuilder StrB = new System.Text.StringBuilder();
-        //    for (int i = 0; i < b.Length; i++)
-        //        StrB.Append(b[i].ToString("x").PadLeft(2, '0'));
-        //    if (Length == 16)
-        //        return StrB.ToString(8, 16);
-        //    else
-        //        return StrB.ToString();
-        //}
-
-        //public static string getMd5(string userPwd)
-        //{
-        //    //获取userPwd的byte类型数组
-        //    byte[] byteUserPwd = Encoding.UTF8.GetBytes(userPwd);
-        //    //实例化MD5CryptoServiceProvider
-        //    MD5CryptoServiceProvider myMd5 = new MD5CryptoServiceProvider();
-        //    // byte类型数组的值转换为 byte类型的Md5值
-        //    byte[] byteMd5UserPwd = myMd5.ComputeHash(byteUserPwd);
-        //    //将byte类型的Md5值转换为字符串
-        //    string strMd5Pwd = Encoding.Default.GetString(byteMd5UserPwd).Trim();
-        //    //返回Md5字符串
-        //    return strMd5Pwd;
-        //}
         public static string getMd5Hash(string input)
         {
             MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
@@ -262,5 +143,53 @@ namespace AIKE_APP.Models
             // Return the hexadecimal string.
             return sBuilder.ToString();
         }
+
+        public static HttpWebResponse CreatePostHttpResponse(string url, IDictionary<string, string> parameters)
+        {
+            HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;//创建请求对象
+            request.Method = "POST";//请求方式
+            request.ContentType = "application/x-www-form-urlencoded";//链接类型
+                                                                      //构造查询字符串
+            if (!(parameters == null || parameters.Count == 0))
+            {
+                StringBuilder buffer = new StringBuilder();
+                bool first = true;
+                foreach (string key in parameters.Keys)
+                {
+
+                    if (!first)
+                    {
+                        buffer.AppendFormat("&{0}={1}", key, parameters[key]);
+                    }
+                    else
+                    {
+                        buffer.AppendFormat("{0}={1}", key, parameters[key]);
+                        first = false;
+                    }
+                }
+                byte[] data = Encoding.UTF8.GetBytes(buffer.ToString());
+                //写入请求流
+                using (Stream stream = request.GetRequestStream())
+                {
+                    stream.Write(data, 0, data.Length);
+                }
+            }
+            return request.GetResponse() as HttpWebResponse;
+        }
+
+        /// <summary>
+        /// 从HttpWebResponse对象中提取响应的数据转换为字符串
+        /// </summary>
+        /// <param name="webresponse"></param>
+        /// <returns></returns>
+        public static string GetResponseString(HttpWebResponse webresponse)
+        {
+            using (Stream s = webresponse.GetResponseStream())
+            {
+                StreamReader reader = new StreamReader(s, Encoding.UTF8);
+                return reader.ReadToEnd();
+            }
+        }
+
     }
 }
