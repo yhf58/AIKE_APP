@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace AIKE_APP.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         //public ActionResult Index()
@@ -59,10 +59,12 @@ namespace AIKE_APP.Controllers
             return View();
         }
 
-        public string Logins(string name,string pwd)
+
+
+        public string Logins(string name, string pwd)
         {
             Logins l = new Logins();
-          
+
             if (name == "" || pwd == "" || name == null || pwd == null)
             {
                 l.state = 0;
@@ -71,8 +73,8 @@ namespace AIKE_APP.Controllers
             }
 
             List<Userinfo> userinfos = AIKE_BLL.DataManager.GetUserinfos();
-            
-            foreach(Userinfo u in userinfos)
+
+            foreach (Userinfo u in userinfos)
             {
                 if (u.AccountNumber == name && u.Password == pwd && u.UserType == 1)
                 {
@@ -80,20 +82,20 @@ namespace AIKE_APP.Controllers
                     l.state = 1;
                     if (Session["LoginName"] == null || Session["LoginName"].ToString() == "")
                     {
-                        l.action ="Home/Index";
+                        l.action = "Home/Index";
                     }
                     else
                     {
                         l.action = Session["LoginName"].ToString();
                     }
-                   
+
                     return JsonConvert.SerializeObject(l);
                 }
             }
             l.state = 2;
             l.action = "";
             return JsonConvert.SerializeObject(l);
-        } 
+        }
 
         public ActionResult Register()
         {
@@ -109,23 +111,23 @@ namespace AIKE_APP.Controllers
                 {
                     return "0";
                 }
-                if (phone.Length!=11)
+                if (phone.Length != 11)
                 {
                     return "2";
                 }
-              
-                    int ra = new Random().Next(10000, 1000000);//随机产生一个验证码
-                    Session["yam"] = ra;
-                    string number = phone;
-                    string smsText = "验证码：" + ra + ",一个小时内有效，为了保障您的账号安全，请勿向他人试漏验证信息";//发送信息的内容
-                    //string PostUrl = GetPostUrl(number, smsText);//调用函数
 
-                    //string result = PostSmsInfo(PostUrl);//调用函数
+                int ra = new Random().Next(10000, 1000000);//随机产生一个验证码
+                Session["yam"] = ra;
+                string number = phone;
+                string smsText = "验证码：" + ra + ",一个小时内有效，为了保障您的账号安全，请勿向他人试漏验证信息";//发送信息的内容
+                                                                                 //string PostUrl = GetPostUrl(number, smsText);//调用函数
 
-                    //string t = GetResult(result);
+                //string result = PostSmsInfo(PostUrl);//调用函数
 
-                    return "1";
-               
+                //string t = GetResult(result);
+
+                return "1";
+
             }
             catch (Exception ex)
             {
@@ -172,7 +174,7 @@ namespace AIKE_APP.Controllers
             catch (Exception ex)
             {
                 strRet = null;
-                Response.Write(" <script>layer.msg('"+ex.Message+"', { icon: 2 });</ script > ");
+                Response.Write(" <script>layer.msg('" + ex.Message + "', { icon: 2 });</ script > ");
             }
             return strRet;
         }
@@ -257,8 +259,8 @@ namespace AIKE_APP.Controllers
             {
                 return ex.Message;
             }
-            
-          
+
+
         }
 
 
@@ -289,8 +291,8 @@ namespace AIKE_APP.Controllers
         {
             return View();
         }
-        
-        public string  Uppwd(string pwd,string acc)
+
+        public string Uppwd(string pwd, string acc)
         {
             if (AIKE_BLL.DataManager.UpPwd(pwd, acc))
             {
@@ -299,7 +301,7 @@ namespace AIKE_APP.Controllers
             else
             {
                 return "0";
-            }   
+            }
         }
 
         //////////////////////登录验证///////////////////////////
@@ -403,7 +405,7 @@ namespace AIKE_APP.Controllers
         [PersonCheckFilterAttribute(IsCheck = true)]
         public ActionResult Collect()
         {
-            
+
             return View();
         }
         [PersonCheckFilterAttribute(IsCheck = true)]
@@ -450,13 +452,13 @@ namespace AIKE_APP.Controllers
         public ActionResult Details(int ProjectID)
         {
             ViewData["cemment"] = AIKE_BLL.DataManager.GetCommentInfos(Convert.ToInt32(ProjectID));
-            
+
             ViewData["projectMsg"] = AIKE_BLL.DataManager.GetProjectMsgInfos(Convert.ToInt32(ProjectID));
 
             return View();
         }
 
-        public string Connrent_s(string txt,int ProjectID)
+        public string Connrent_s(string txt, int ProjectID)
         {
             if (Session["person"] == null)
             {
@@ -483,6 +485,14 @@ namespace AIKE_APP.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult payment_suc()
+        {
+            return View();
+        }
+/// <summary>
+/// 登录界面
+/// </summary>
+/// <returns></returns>
+        public ActionResult Signin()
         {
             return View();
         }

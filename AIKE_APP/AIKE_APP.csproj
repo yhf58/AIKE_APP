@@ -409,6 +409,7 @@
     <Content Include="Lib\Home\Login\css\style.css" />
     <Content Include="Lib\Home\Login\img\bg.jpg" />
     <Content Include="Lib\Home\Login\img\gengduo.png" />
+    <Content Include="Lib\Home\Signin\img\JGNFIY84EVE%247R}`RULN]8A.png" />
     <Content Include="Lib\Home\Login\img\name.png" />
     <Content Include="Lib\Home\Login\img\password.png" />
     <Content Include="Lib\Home\Login\img\qq.png" />
@@ -427,6 +428,9 @@
     <Content Include="Lib\Home\register\img\成功.png" />
     <Content Include="Lib\Home\register\js\jquery.bootstrap.wizard.js" />
     <Content Include="Lib\Home\register\js\prettify.js" />
+    <Content Include="Lib\Home\Signin\css\htmleaf-demo.css" />
+    <Content Include="Lib\Home\Signin\css\Signin.css" />
+    <Content Include="Lib\Home\Signin\js\Signin.js" />
     <Content Include="Lib\News\css\chinaz.css" />
     <Content Include="Lib\News\js\jquery-1.8.3.min.js" />
     <Content Include="Lib\News\js\js.js" />
@@ -516,6 +520,7 @@
     <Content Include="Views\Test\_PartialPage1.cshtml" />
     <Content Include="Views\Project\ProjectDetail.cshtml" />
     <Content Include="Views\Home\payment_suc.cshtml" />
+    <Content Include="Views\Home\Signin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AIKE_BLL\AIKE_BLL.csproj">

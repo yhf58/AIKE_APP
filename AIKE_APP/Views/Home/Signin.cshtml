@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登录界面</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Lib/Home/Signin/css/htmleaf-demo.css" rel="stylesheet" />
+    <link href="~/Lib/Home/Signin/css/Signin.css" rel="stylesheet" />
+    <script src="~/Common/jquery-3.1.1.js"></script>
+    <script src="~/Lib/Home/Signin/js/Signin.js"></script>
+</head>
+<body>
+    <div class="htmleaf-container">
+        <div class="demo form-bg">
+            <div class="container">
+                <!--帐号密码-QQ微信登录-->
+                <div class="row" id="row1">
+                    <div class="col-md-offset-3 col-md-6">
+                        <form class="form-horizontal">
+                            <p class="heading">用户登录<span id="sp1" class="glyphicon glyphicon-chevron-right" title="扫码登录" style="font-size:20px;margin-left:15px;"></span></p>
+                            <div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="账户">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <div class="form-group help">
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                                    <i class="fa fa-lock"></i>
+                                    <a href="#" class="fa fa-question-circle" title="忘记密码"></a>
+                                </div>
+                                <div class="form-group">
+                                    <div class="main-checkbox">
+                                        <input type="checkbox" value="None" id="checkbox1" name="check" />
+                                        <label for="checkbox1"></label>
+                                    </div>
+                                    <span class="text">记住我</span>
+                                    <button type="submit" class="btn btn-default">立刻登录</button>
+                                </div>
+                            </div>
+                            <div id="Quick">
+                                <div class="qq"><span><img src="~/Lib/Home/Login/img/qq.png" style="width:40px;height:40px;" /></span></div>
+                                <div class="wx"><span><img src="~/Lib/Home/Login/img/weixin.png" style="width:35px;height:35px;" /></span></div>
+                                <div class="register"><b>立即注册</b></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--扫码登录-->
+                <div id="row"style="display:none;">
+                    <div class="col-md-offset-3 col-md-6">
+                        <form class="form-horizontal">
+                            <p class="heading">扫码登录<span id="sp2" class="glyphicon glyphicon-chevron-left" title="帐号登录" style="font-size:20px;margin-left:15px;"></span></p>
+                            <div class="width" >
+                                <div class="width_1">
+
+                                    <img src="~/Lib/Home/Signin/img/JGNFIY84EVE$7R}`RULN]8A.png" style="margin-left:22%"/>
+                                    <span style="font-size:10px;margin-left:30px;">使用手机端扫描二维码安全登录</span>
+                                </div>
+                            </div>                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
